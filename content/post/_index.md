@@ -1,4 +1,4 @@
 ---
 title: "Posts"
-dragt: "true"
+draft: "true"
 ---
