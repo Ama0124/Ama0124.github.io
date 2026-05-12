@@ -1,20 +1,17 @@
 <div id="encrypt-section">
     <div id="password-form" style="text-align: center; padding: 20px; border: 1px dashed #ccc; margin: 20px 0;">
-        <p>🔒 密碼正確才能窺視深淵</p>
+        <p>🔒 密碼正確才能凝視深淵：</p>
         <input type="password" id="password-input" style="padding: 5px; border: 1px solid #ddd;">
         <button onclick="decryptContent()" style="padding: 5px 15px; background: #ee8095; color: white; border: none; border-radius: 4px; cursor: pointer;">解密</button>
         <p id="err-msg" style="color: red; display: none; margin-top: 10px;">密碼錯誤！</p>
     </div>
-    <div id="protected-content" style="display: none;">
-        {{ .Inner }} 
-    </div>
+    <div id="protected-content" style="display: none;">{{ .Inner }}</div>
 </div>
 
 <script>
 function decryptContent() {
     const password = document.getElementById('password-input').value;
     const correctPassword = "{{ .Get "password" }}"; 
-    
     if (password === correctPassword) {
         document.getElementById('password-form').style.display = 'none';
         document.getElementById('protected-content').style.display = 'block';
