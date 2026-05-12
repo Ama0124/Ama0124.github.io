@@ -5,9 +5,10 @@ draft: false
 tags: 
     - "diary"
     - "日本語で日記を書く"
+
+description: "我把秘密都藏在那裡了，去找吧!! 🔒"
 ---
 
-我把祕密都藏在那裡了，去找吧!!
 
 
 {{% encrypt password="5151" %}}
