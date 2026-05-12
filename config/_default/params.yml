@@ -114,19 +114,19 @@ footer:
 # Sidebar
 # sidebar: right # deprecated, use sidebar.position instead
 sidebar:
-  position: right
+  position: left
   menu: true  # whether to show the sidebar menu button, ignored on mobile devices
   article:
     show_common: true # whether to show common sidebar, ignored on mobile devices
 
 social:
-  # email: mailto:xxx@gmail.com
-  # github: https://github.com/yourname
+  email: eric.ma940124@gmail.com
+  github: https://github.com/Ama0124
   # google: https://plus.google.com/yourname
   # twitter: https://twitter.com/yourname
   # bluesky: https://bsky.app/profile/yourname
   # facebook: https://www.facebook.com/yourname
-  # instagram: https://www.instagram.com/yourname
+  instagram: https://www.instagram.com/5_187.delight
   # linkedin: https://www.linkedin.com/in/yourname
   # pinterest: https://www.pinterest.com/yourname
   # youtube: https://www.youtube.com/channel/yourname
