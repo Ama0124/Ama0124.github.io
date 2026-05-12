@@ -8,6 +8,7 @@ tags:
 
 description: "我把秘密都藏在那裡了，去找吧!! 🔒"
 cover: "images/ui_bird.png"
+banner: "images/ui_bird.png"
 ---
 
 
