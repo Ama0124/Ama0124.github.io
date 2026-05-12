@@ -1,7 +1,13 @@
 baseURL = 'https://Ama0124.github.io/'
-languageCode = 'zh-TW'
+locale = 'zh-TW'
 title = 'uiui'
 theme = 'reimu'
 
 [outputs]
-  home = ["Algolia", "HTML", "RSS"]
+home = ["Algolia", "HTML", "RSS"]
+
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
