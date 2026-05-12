@@ -1,4 +1,7 @@
-baseURL = 'http://Ama0124.github.io/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = "reimu"
+baseURL = 'https://Ama0124.github.io/'
+languageCode = 'zh-TW'
+title = 'uiui'
+theme = 'reimu'
+
+[outputs]
+  home = ["Algolia", "HTML", "RSS"]
