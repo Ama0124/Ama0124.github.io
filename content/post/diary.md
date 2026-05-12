@@ -2,7 +2,7 @@
 title: "Diary"
 date: 2026-05-12T15:11:05Z
 draft: false
-tag: 
+tags: 
     - "diary"
     - "日本語で日記を書く"
 ---
