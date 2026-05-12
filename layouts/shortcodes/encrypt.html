@@ -1,0 +1,30 @@
+<div id="encrypt-section">
+    <div id="password-form" style="text-align: center; padding: 20px; border: 1px dashed #ccc;">
+        <p>輸入密碼才可以窺探祕密：</p>
+        <input type="password" id="password-input" placeholder="請輸入密碼" style="padding: 5px; border-radius: 4px; border: 1px solid #ddd;">
+        <button onclick="decryptContent()" style="padding: 5px 15px; cursor: pointer; background: #ee8095; color: white; border: none; border-radius: 4px;">解密</button>
+        <p id="err-msg" style="color: red; display: none; font-size: 0.8em;">密碼錯誤，請再試一次。</p>
+    </div>
+    <div id="protected-content" style="display: none;">
+        {{ .Inner | safeHTML }}
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script>
+function decryptContent() {
+    const password = document.getElementById('password-input').value;
+    const encryptedData = "{{ .Inner | base64Encode }}"; // 簡單的示範使用 Base64，若要高強度加密需配合 CryptoJS.AES
+    
+    // 這裡我們示範一個簡單的邏輯：預設密碼比對
+    // 註：這只是前端展示，若要極高強度建議搜尋 "hugo-encrypt" 套件整合
+    const correctPassword = "{{ .Get "password" }}"; 
+    
+    if (password === correctPassword) {
+        document.getElementById('password-form').style.display = 'none';
+        document.getElementById('protected-content').style.display = 'block';
+    } else {
+        document.getElementById('err-msg').style.display = 'block';
+    }
+}
+</script>
