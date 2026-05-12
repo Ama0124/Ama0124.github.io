@@ -7,7 +7,7 @@ tags:
     - "日本語で日記を書く"
 
 description: "我把秘密都藏在那裡了，去找吧!! 🔒"
-cover: "ui_bird.png"
+cover: "images/ui_bird.png"
 ---
 
 
