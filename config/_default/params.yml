@@ -698,10 +698,26 @@ player:
     enable: true
     options:
       audio: [
-        { name: "月が綺麗ねと言われたい！",
+        { 
+          name: "月が綺麗ねと言われたい！",
           artist: "柿崎ユウタ",
           url: "music/tsuki.mp3",
-          cover: "images/ui_bird.png"
+          cover: "images/ui_bird.png",
+          theme: "#d580ff"
+        },
+        {
+          name: "ray (超かぐや姫 ver.)",
+          artist: "かぐや＆ヤチヨ",
+          url: "music/ray.mp3",
+          cover: "images/ui_bird.png",
+          theme: "#f3d1c8"
+        },
+        {
+          name: "恋",
+          artist: "星野源",
+          url: "music/恋.mp3",
+          cover: "images/ui_bird.png",
+          theme: "#dbdb70"
         }
       ]
       fixed: true
