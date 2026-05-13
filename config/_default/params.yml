@@ -654,7 +654,7 @@ injector:
 
 # Experimental, may have a lot of bugs, open with caution!
 pjax:
-  enable: false
+  enable: true
 
 # Experimental
 # https://github.com/GoogleChromeLabs/quicklink
@@ -695,15 +695,20 @@ player:
   # if you enable meting, you must enable aplayer first
   aplayer:
     # https://github.com/DIYgod/APlayer
-    enable: false
+    enable: true
     options:
-      audio: []
+      audio: [
+        - name: "月が綺麗ねと言われたい！"
+          artist: "柿崎ユウタ"
+          url: "https://www.youtube.com/watch?v=sP4bUWCDwmA&list=PLLbUJG4Hl9EihJzbCOmO1wCuUaW1NDmxM&index=54"
+          cover: "images/ui_bird.png"
+      ]
       fixed: true
-      autoplay:
-      loop:
-      order:
-      preload:
-      volume:
+      autoplay: true
+      loop: "all"
+      order: "random"
+      preload: "auto"
+      volume: 0.7
       mutex:
       listFolded:
       lrcType:
