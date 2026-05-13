@@ -700,7 +700,7 @@ player:
       audio: [
         { name: "月が綺麗ねと言われたい！",
           artist: "柿崎ユウタ",
-          url: "https://www.youtube.com/watch?v=sP4bUWCDwmA&list=PLLbUJG4Hl9EihJzbCOmO1wCuUaW1NDmxM&index=54",
+          url: "music/tsuki.mp3",
           cover: "images/ui_bird.png"
         }
       ]
