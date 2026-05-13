@@ -691,17 +691,18 @@ pace:
 # Please turn on pjax to use this feature
 player:
   disable_on_mobile: false
-  position: before_sidebar # before_sidebar | after_sidebar | after_widget
+  position: after_sidebar # before_sidebar | after_sidebar | after_widget
   # if you enable meting, you must enable aplayer first
   aplayer:
     # https://github.com/DIYgod/APlayer
     enable: true
     options:
       audio: [
-        - name: "月が綺麗ねと言われたい！"
+        { name: "月が綺麗ねと言われたい！"
           artist: "柿崎ユウタ"
           url: "https://www.youtube.com/watch?v=sP4bUWCDwmA&list=PLLbUJG4Hl9EihJzbCOmO1wCuUaW1NDmxM&index=54"
           cover: "images/ui_bird.png"
+        }
       ]
       fixed: true
       autoplay: true
