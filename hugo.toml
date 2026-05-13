@@ -1,7 +1,7 @@
-baseURL = 'https://Ama0124.github.io/'
-locale = 'zh-TW'
-title = 'Ama's blog'
-theme = 'reimu'
+baseURL = "https://Ama0124.github.io/"
+locale = "zh-TW"
+title = "Ama's blog"
+theme = "reimu"
 
 [outputs]
 home = ["Algolia", "HTML", "RSS"]
