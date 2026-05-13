@@ -698,9 +698,9 @@ player:
     enable: true
     options:
       audio: [
-        { name: "月が綺麗ねと言われたい！"
-          artist: "柿崎ユウタ"
-          url: "https://www.youtube.com/watch?v=sP4bUWCDwmA&list=PLLbUJG4Hl9EihJzbCOmO1wCuUaW1NDmxM&index=54"
+        { name: "月が綺麗ねと言われたい！",
+          artist: "柿崎ユウタ",
+          url: "https://www.youtube.com/watch?v=sP4bUWCDwmA&list=PLLbUJG4Hl9EihJzbCOmO1wCuUaW1NDmxM&index=54",
           cover: "images/ui_bird.png"
         }
       ]
