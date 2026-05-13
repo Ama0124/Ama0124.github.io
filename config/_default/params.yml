@@ -34,10 +34,10 @@ subtitle:
   typing:
     enable: true
     strings:
-      - ういうい
-      # - Sentence 2
-      # - Sentence 3
-      # - Sentence 4
+      - うい うい
+      - Ama Ama
+      - Hello!
+      - 看啥呢
     typeSpeed: 100              # 打字速度（毫秒/字符） 
     backSpeed: 50               # 删除速度（毫秒/字符）
     backDelay: 2000             # 打完一句话后，等待时间
