@@ -713,7 +713,7 @@ player:
         {
           name: "恋",
           artist: "星野源",
-          url: "/music/koi.mp3",
+          url: "/music/Koi.mp3",
           cover: "images/ui_bird.png"
         }
       ]
