@@ -1,6 +1,6 @@
 baseURL = "https://Ama0124.github.io/"
 locale = "zh-TW"
-title = "Ama/'s blog"
+title = "My blog"
 theme = "reimu"
 
 [outputs]
