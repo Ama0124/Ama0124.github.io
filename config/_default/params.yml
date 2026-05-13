@@ -29,6 +29,7 @@ timeFormat: "2006-01-02 15:04:05"
 author: Ama
 email: eric.ma940124@gmail.com
 description: "ういういかわいい"
+
 subtitle:
   typing:
     enable: true
@@ -46,7 +47,7 @@ subtitle:
     showCursor: true            # 是否显示闪烁的字符
     cursorChar: "|"             # 字符
     smartBackspace: false       # 智能退格，只删除不同的部分
-  text: "ういうい"        # 当 typing.enable = false 时使用
+  # text: "ういうい"        # 当 typing.enable = false 时使用
 
 banner: "images/banner.png"
 # You can also write it in the form of the following url
