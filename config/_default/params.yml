@@ -702,19 +702,31 @@ player:
           name: "月が綺麗ねと言われたい！",
           artist: "柿崎ユウタ",
           url: "/music/tsuki.mp3",
-          cover: "images/ui_bird.png"
+          cover: "images/music/tsuki.jpg"
         },
         {
           name: "ray (超かぐや姫 ver.)",
           artist: "かぐや＆ヤチヨ",
           url: "/music/ray.mp3",
-          cover: "images/ui_bird.png"
+          cover: "images/music/ray.jpg"
         },
         {
           name: "恋",
           artist: "星野源",
           url: "/music/Koi.mp3",
-          cover: "images/ui_bird.png"
+          cover: "images/music/koi.png"
+        },
+        {
+          name: "キスだけでいいからね",
+          artist: "猫又おかゆ",
+          url: "/music/kiss.mp3",
+          cover: "images/music/kiss.jpg"
+        },
+        {
+          name: "ガザニア",
+          artist: "猫又おかゆ",
+          url: "/music/gazania.mp3",
+          cover: "images/music/gazania.jpg"
         }
       ]
       fixed: true
