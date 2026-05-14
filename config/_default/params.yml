@@ -734,11 +734,11 @@ player:
         }
       ]
       fixed: true
-      autoplay: true
+      autoplay: false
       loop: "all"
       order: "random"
       preload: "auto"
-      volume: 0.7
+      volume: 0.3
       mutex:
       listFolded:
       lrcType:
