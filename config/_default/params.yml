@@ -7,16 +7,16 @@
 menu:
   - name: home
     url: ""
-    icon: # default use taichi icon, you can use a hexadecimal representation of fontawesome or icon_font, like 'f0c1'
+    icon: "e618" # default use taichi icon, you can use a hexadecimal representation of fontawesome or icon_font, like 'f0c1'
   - name: archives
     url: "archives"
-    icon:
+    icon: "e635"
   - name: about
     url: "about"
-    icon:
+    icon: "e635"
   - name: friend
     url: "friend"
-    icon:
+    icon: "e635"
 
 mainSections: ["post"]
 # 年，月，日及时间的格式化样式
@@ -119,15 +119,6 @@ sidebar:
   article:
     show_common: true # whether to show common sidebar, ignored on mobile devices
 
-  bottom:
-    # 回到頂部按鈕
-    back_to_top:
-      enable: true
-      icon:
-        # README 提到的路徑規則
-        url: "../images/monitarinngu.png" 
-        rotate: true
-        mask: true # 關鍵點：如果要顯示原圖色彩，請設為 false
 
 social:
   email: eric.ma940124@gmail.com
