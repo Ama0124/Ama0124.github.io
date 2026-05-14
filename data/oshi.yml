@@ -7,3 +7,23 @@
   url: https://x.com/ui_shig?s=20
   desc: X
   image: "ui.png"
+
+- name: Dooby Yt.
+  url: https://www.youtube.com/@dooby3d
+  desc: youtube
+  image: "Dooby.jpg"
+
+- name: Dooby X.
+  url: https://x.com/dooby3D?s=20
+  desc: X
+  image: "Dooby.jpg"
+
+- name: 赤井はあと/はあちゃま Yt.
+  url: https://www.youtube.com/@AkaiHaato
+  desc: youtube
+  image: "haachama.jpg"
+
+- name: 赤井はあと/はあちゃま X.
+  url: https://x.com/akaihaato?s=20
+  desc: X
+  image: "haachama.jpg"
