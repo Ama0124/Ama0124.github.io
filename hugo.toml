@@ -19,5 +19,25 @@ notAlternative = true
 [markup.goldmark.renderer]
   unsafe = true
 
+[[menu.main]]
+  name = "首頁"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "文章"
+  url = "/archives/"
+  weight = 2
+
+[[menu.main]]
+  name = "關於"
+  url = "/about/"
+  weight = 3
+
+[[menu.main]]
+  name = "好友"
+  url = "/friend/"
+  weight = 4
+
 summaryLength = 0
 preserveTaxonomyNames = true
