@@ -1,3 +1,8 @@
+- name: しぐれうい
+  url: https://www.youtube.com/@ui_shig
+  desc: youtube
+  image: "ui.png"
+
 - name: JerryFan
   url: https://www.instagram.com/huaaa__57
   desc: instagram
@@ -17,3 +22,4 @@
   url: https://github.com/AndyXue1019
   desc: github
   image: "xue.jpg"
+
