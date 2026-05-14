@@ -17,6 +17,9 @@ menu:
   - name: friend
     url: "friend"
     icon: "e635"
+  - name: oshi
+    url: "oshi"
+    icon: "e635"
 
 mainSections: ["post"]
 # 年，月，日及时间的格式化样式
