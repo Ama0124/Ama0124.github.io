@@ -1,7 +1,12 @@
 ---
 title: "Gallery"
 date: 2026-05-14T11:43:35Z
-draft: true
+draft: false
+tags: 
+    - "gallery"
+    
+description: "好畫分享"
+banner: "images/banner.png"
 ---
 
 {{< gallery >}}
