@@ -119,6 +119,16 @@ sidebar:
   article:
     show_common: true # whether to show common sidebar, ignored on mobile devices
 
+  bottom:
+    # 回到頂部按鈕
+    back_to_top:
+      enable: true
+      icon:
+        # README 提到的路徑規則
+        url: "../images/monitarinngu.png" 
+        rotate: true
+        mask: true # 關鍵點：如果要顯示原圖色彩，請設為 false
+
 social:
   email: eric.ma940124@gmail.com
   github: https://github.com/Ama0124
