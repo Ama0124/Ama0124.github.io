@@ -14,10 +14,10 @@ menu:
   - name: about
     url: "about"
     icon: "e635"
-  - name: 朋友
+  - name: friend
     url: "friend"
     icon: "e635"
-  - name: 推し
+  - name: oshi
     url: "oshi"
     icon: "e635"
 
