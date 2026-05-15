@@ -139,7 +139,7 @@ description: Motion Capture introdution
 
 
 ## 實作
-等我強一點再說:>
+{{< post/Mocap/IMU_ring.md >}}
 
 ## 名詞解釋
 
