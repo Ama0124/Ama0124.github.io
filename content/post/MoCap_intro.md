@@ -6,6 +6,7 @@ tag:
     - MoCap
 cover: "images/ui_bird.png"
 banner: "images/ui_bird.png"
+description: Motion Capture introdution
 ---
 
 
@@ -74,7 +75,7 @@ banner: "images/ui_bird.png"
         - 精度高，不需要後製來辨識每個點，不易混淆
         - 設備較重，穿戴成本高，需要電源或電池
         - **使用情境** : 實驗室高階人體運動分析、虛擬製作現場
-{%youtube vgwBfT_IFMw %}
+    {{< youtube vgwBfT_IFMw >}}
     - [Passive Markers](https://p.turbosquid.com/ts-thumb/Am/l2eHJn/sj/screenshot006/png/1625335051/600x600/fit_q87/1de6c1c6074b0c91b5346ce7b31f55b2f5f6799d/screenshot006.jpg) (120 - 500(Hz/fps))
         - 用反射器(反光球)反射光源，利用軟體計算反射光源座標，整合成3D骨架
         - 設備輕巧，不需要電源，可以大量部屬(成本低)
@@ -100,7 +101,7 @@ banner: "images/ui_bird.png"
 
 **介紹** : [Sony mcocpi 3D Motion Capture](https://electronics.sony.com/more/mocopi/all-mocopi/p/qmss1-uscx?srsltid=AfmBOoqvU7G9b9TteY-Dzengr-zu5_zgUBcbgIAYq7le1JQ_7w6RcD6U)([規格](https://www.sony.com/electronics/support/other-products-motion-capture-systems/qm-ss1/specifications))
 
-{%youtube 2eHjC7daOWs %}
+{{< youtube 2eHjC7daOWs >}}
 ### [Markerless Motion Capture](https://news.miami.edu/edu/_assets/images/images-stories/2020/09/kinatrax940x529.jpg)
 在計算機視覺領域不斷的進步下，無標記光學式動態捕捉蓬勃發展，在這個系統下，複雜的特殊設備不再被需要。演員的動作被記錄在多個stream中，再用特殊的方法(CNN...之類的)分析這些stream來辨識人體型態，並且分解成各自獨立的部分以方便進行追蹤。
 所以，無標記式動態捕捉的所有過程都透過軟體進行，消除了物理限制，並提高了計算成本。在這個系統下最廣為人知的就是Microsoft的[Kinect](https://en.wikipedia.org/wiki/Kinect#)(目前已停產)，它向大眾提供了低成本的動態捕捉方案。
@@ -156,4 +157,4 @@ banner: "images/ui_bird.png"
 
 ### 圖像木偶化(Graphical Marionetter)
 就如同字面上意思所述，木偶圖像化就是將圖像轉變成像牽線木偶一樣，可以對它不同的部位進行移動或其他操作。動畫師可以透過GUI、滑鼠等工具來操作人物的骨架及關節。
-{%youtube 77RvfjaWvRQ %}
+{{< youtube 77RvfjaWvRQ >}}
