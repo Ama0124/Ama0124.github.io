@@ -23,5 +23,10 @@ notAlternative = true
 guessSyntax = true
 noClasses = false
 
+[markup.goldmark.extensions.passthrough]
+enable = true
+delimiters.block = [["\\[", "\\]"], ["$$", "$$"]]
+delimiters.inline = [["\\(", "\\)"], ["$", "$"]]
+
 summaryLength = 0
 preserveTaxonomyNames = true

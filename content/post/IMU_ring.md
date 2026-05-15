@@ -8,6 +8,7 @@ cover: "images/ui_bird.png"
 banner: "images/ui_bird.png"
 description: >
     Motion Capture Implementation : IMU_ring
+math: true
 ---
 
 ## Motivation
