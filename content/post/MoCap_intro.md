@@ -139,7 +139,7 @@ description: Motion Capture introdution
 
 
 ## 實作
-- [IMU_ring](/post/IMU_ring.md)
+- [IMU_ring]({{< ref "IMU_ring.md" >}})
 
 ## 名詞解釋
 
