@@ -6,6 +6,6 @@ tags:
     - MoCap
 cover: "images/ui_bird.png"
 banner: "images/ui_bird.png"
-description: Motion Capture Implementation : IMU_ring
+description: Motion Capture Implementation ":" IMU_ring
 ---
 
