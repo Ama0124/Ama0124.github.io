@@ -139,7 +139,7 @@ description: Motion Capture introdution
 
 
 ## 實作
-- {{< link title="Imu ring" link/path="/post/IMU_ring.md/" cover="images/ui_bird.png" escape="true" >}}
+- {{< link title="Imu ring" link/path="/post/IMU_ring.md" cover="images/ui_bird.png" escape="true" >}}
 
 ## 名詞解釋
 
