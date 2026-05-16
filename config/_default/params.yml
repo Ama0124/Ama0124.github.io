@@ -483,9 +483,9 @@ beaudar:
 
 algolia_search:
   enable: true
-  appID:
-  apiKey:
-  indexName:
+  appID: UZB75IYILB
+  apiKey: 148df3890cf79301c121adea6466ed32
+  indexName: AmaWeb
   hits:
     per_page: 10
 
