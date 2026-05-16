@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>日本語で日記を書く on My blog</title>
+    <link>https://Ama0124.github.io/tags/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%A7%E6%97%A5%E8%A8%98%E3%82%92%E6%9B%B8%E3%81%8F/</link>
+    <description>Recent content from My blog</description>
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    
+    <managingEditor>eric.ma940124@gmail.com (Ama)</managingEditor>
+    <webMaster>eric.ma940124@gmail.com (Ama)</webMaster>
+    
+    <copyright>本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！</copyright>
+    
+    <lastBuildDate>Tue, 12 May 2026 15:11:05 +0000</lastBuildDate>
+    
+    
+    <atom:link href="https://Ama0124.github.io/tags/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%A7%E6%97%A5%E8%A8%98%E3%82%92%E6%9B%B8%E3%81%8F/index.xml" rel="self" type="application/rss&#43;xml" />
+    
+
+    
+    
+
+    <item>
+      <title>Diary</title>
+      <link>https://Ama0124.github.io/post/diary/</link>
+      <pubDate>Tue, 12 May 2026 15:11:05 &#43;0000</pubDate>
+      <author>eric.ma940124@gmail.com (Ama)</author>
+      <guid>https://Ama0124.github.io/post/diary/</guid>
+      <description>
+        <![CDATA[<h1>Diary</h1><p>作者：Ama（eric.ma940124@gmail.com）</p>
+        
+          <div id="encrypt-section">
+    <div id="password-form" style="text-align: center; padding: 20px; border: 1px dashed #ccc; margin: 20px 0;">
+        <p>🔒 密碼正確才能凝視深淵：</p>
+        <input type="password" id="password-input" style="padding: 5px; border: 1px solid #ddd;">
+        <button onclick="decryptContent()" style="padding: 5px 15px; background: #ee8095; color: white; border: none; border-radius: 4px; cursor: pointer;">解密</button>
+        <p id="err-msg" style="color: red; display: none; margin-top: 10px;">密碼錯誤！</p>
+    </div>
+    <div id="protected-content" style="display: none;">
+<h3 id="五月十一日月曜日天気晴れの日">
+<a class="header-anchor" href="#%e4%ba%94%e6%9c%88%e5%8d%81%e4%b8%80%e6%97%a5%e6%9c%88%e6%9b%9c%e6%97%a5%e5%a4%a9%e6%b0%97%e6%99%b4%e3%82%8c%e3%81%ae%e6%97%a5"></a>
+五月十一日　月曜日　天気：晴れの日
+</h3><p>今日は六時に起きるつもりだったけど、起きられなかった。歯を磨いてから、MCLへいった。 それから、おにぎりみたいなものをたべて、コーヒーを飲みながら、会議で話す内容を準備していた。 十時に先生と会議をした、カメラを使いたくないのに、先生が新しい方法を教えてくれた。 あと四週間で最後の試験だ。でも　今日も午後の授業には行かなかった、それはよくないと思う。 これからはちゃんと授業に行こうと思っている。 じゃあ、学生に数学を教えてくる。</p>
+<h3 id="五月十二日火曜日天気暑すぎる">
+<a class="header-anchor" href="#%e4%ba%94%e6%9c%88%e5%8d%81%e4%ba%8c%e6%97%a5%e7%81%ab%e6%9b%9c%e6%97%a5%e5%a4%a9%e6%b0%97%e6%9a%91%e3%81%99%e3%81%8e%e3%82%8b"></a>
+五月十二日　火曜日　天気：暑すぎる
+</h3><p>今日も六時に起きるつもりだった、昨日と同じで起きられなかった。
+ああ！もう十三日だな。今日も忙しくて、疲れた。
+ちょっと怠けてもいいよね。</p>
+<h3 id="五月十三日水曜日天気朝は暑くて晩は雨">
+<a class="header-anchor" href="#%e4%ba%94%e6%9c%88%e5%8d%81%e4%b8%89%e6%97%a5%e6%b0%b4%e6%9b%9c%e6%97%a5%e5%a4%a9%e6%b0%97%e6%9c%9d%e3%81%af%e6%9a%91%e3%81%8f%e3%81%a6%e6%99%a9%e3%81%af%e9%9b%a8"></a>
+五月十三日　水曜日　天気：朝は暑くて、晩は雨
+</h3><p>今日は九時に起きた、また会議をした。
+今日も疲れ。
+自分のWebサイトを作っていた。
+色々な機能を作っている。例えば、ミュージックプレイヤーとか、友達のリックとか
+晩ご飯はマクドナルドを食べた、お腹がいっぱい。
+明日も一日頑張ろう。</p>
+<h3 id="五月十四日木曜日天気雨">
+<a class="header-anchor" href="#%e4%ba%94%e6%9c%88%e5%8d%81%e5%9b%9b%e6%97%a5%e6%9c%a8%e6%9b%9c%e6%97%a5%e5%a4%a9%e6%b0%97%e9%9b%a8"></a>
+五月十四日　木曜日　天気：雨
+</h3><p>今日は一日のんびりしていた。
+午前は一つの授業にしか行かなかった。
+ダメだとわかっているけど、すごくつまらなかった。
+次はちゃんと全部の授業に行こうと思っている。
+今日もサイトを少し作っていた。
+なんだか元気すぎて、全然寝られない。
+でも、明日は授業がない。嬉しい。</p>
+        
+        <hr><p>本文2026-05-12首發於<a href='https://Ama0124.github.io/'>My blog</a>，最後修改於2026-05-12</p>]]>
+      </description>
+      
+    </item>
+    
+  </channel>
+</rss>

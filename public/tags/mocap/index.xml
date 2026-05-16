@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MoCap on My blog</title>
+    <link>https://Ama0124.github.io/tags/mocap/</link>
+    <description>Recent content from My blog</description>
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    
+    <managingEditor>eric.ma940124@gmail.com (Ama)</managingEditor>
+    <webMaster>eric.ma940124@gmail.com (Ama)</webMaster>
+    
+    <copyright>本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！</copyright>
+    
+    <lastBuildDate>Fri, 15 May 2026 05:30:37 +0000</lastBuildDate>
+    
+    
+    <atom:link href="https://Ama0124.github.io/tags/mocap/index.xml" rel="self" type="application/rss&#43;xml" />
+    
+
+    
+    
+
+    <item>
+      <title>IMU_ring</title>
+      <link>https://Ama0124.github.io/post/imu_ring/</link>
+      <pubDate>Fri, 15 May 2026 05:30:37 &#43;0000</pubDate>
+      <author>eric.ma940124@gmail.com (Ama)</author>
+      <guid>https://Ama0124.github.io/post/imu_ring/</guid>
+      <description>
+        <![CDATA[<h1>IMU_ring</h1><p>作者：Ama（eric.ma940124@gmail.com）</p>
+        
+          <h2 id="motivation">
+<a class="header-anchor" href="#motivation"></a>
+Motivation
+</h2><p>因為滑鼠通常需要放在平滑的平面上，限制較多，也不利於攜帶便利性，如果有一個設備是戒指造型且只要戴在手指上操控，那對於便利性會有極大的好處。所以我們利用IMU作為蒐集資料的設備，利用EKF來進行濾波，藉此來操控電腦的鼠標。</p>
+<h2 id="gimbal-lock">
+<a class="header-anchor" href="#gimbal-lock"></a>
+Gimbal lock
+</h2><p>Gimbal lock(萬向鎖)就是陀螺儀在特定軸向時，會失去一個自由度。
+以三軸陀螺儀為例，若以Y軸做旋轉軸將X軸向上旋轉90度，那X軸跟Z軸將會重疊，導致我們無法判斷接下來是X軸或Z軸在做旋轉。
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Gimbal_Lock_Plane.gif?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail_unscaled" alt="image"></p>
+<p>在應用數學中，歐拉角(Euler angles)就會有gimbal lock的產生，因此我們會選擇四元數(Quaternions)來做運算。</p>
+<h2 id="quaternions">
+<a class="header-anchor" href="#quaternions"></a>
+Quaternions
+</h2><p>通常複數是由實數加上虛數單位\(i\), 其中
+\[i^{2} = -1\]</p>
+<p>而四元數的定義則是，實數加上三個虛數單位\(i, j, k\), 並且有下列關係
+\[i^{2} = j^{2} = k^{2} = ijk = -1\]</p>
+<h2 id="開始實作">
+<a class="header-anchor" href="#%e9%96%8b%e5%a7%8b%e5%af%a6%e4%bd%9c"></a>
+開始實作
+</h2><h3 id="硬體設備">
+<a class="header-anchor" href="#%e7%a1%ac%e9%ab%94%e8%a8%ad%e5%82%99"></a>
+硬體設備
+</h3><ul>
+<li>Raspberry Pi 4</li>
+<li>MPU-9250 9-DOF IMU</li>
+</ul>
+<p>九軸IMU中包含</p>
+<ul>
+<li>陀螺儀</li>
+<li>加速度計</li>
+<li>磁力計</li>
+</ul>
+<p>這三個感測器可以提供姿態估計所需要的資訊</p>
+<h3 id="流程">
+<a class="header-anchor" href="#%e6%b5%81%e7%a8%8b"></a>
+流程
+</h3><ol>
+<li>IMU 蒐集資料</li>
+<li>樹莓派接受感測器數據</li>
+<li>EKF進行姿態估計</li>
+<li>計算roll/pitch</li>
+<li>映射成滑鼠移動</li>
+<li>傳送到電腦中操控</li>
+</ol>
+<h3 id="extended-kalman-filter">
+<a class="header-anchor" href="#extended-kalman-filter"></a>
+Extended Kalman Filter
+</h3><p>為什麼需要EKF? 因為IMU 的資料通常會包含很多雜訊, 其中包含</p>
+<ul>
+<li>陀螺儀長時間積分產生飄移</li>
+<li>加速度計容移受到震動干擾</li>
+<li>磁力計容易受到外部磁場干擾
+所以我們需要用sensor fusion來將多種感測器資料結合, 而 EKF(Extended Kalman Filter) 就是一種非常常見的非線性狀態估測方法。</li>
+</ul>
+<h3 id="prediction-state">
+<a class="header-anchor" href="#prediction-state"></a>
+Prediction state
+</h3><p>在預測階段，我們要利用陀螺儀的角速度來進行姿態的更新，假設角速度為
+</p>
+        
+        <hr><p>本文2026-05-15首發於<a href='https://Ama0124.github.io/'>My blog</a>，最後修改於2026-05-15</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>Motion capture introdution</title>
+      <link>https://Ama0124.github.io/post/mocap_intro/</link>
+      <pubDate>Fri, 15 May 2026 05:16:15 &#43;0000</pubDate>
+      <author>eric.ma940124@gmail.com (Ama)</author>
+      <guid>https://Ama0124.github.io/post/mocap_intro/</guid>
+      <description>
+        <![CDATA[<h1>Motion capture introdution</h1><p>作者：Ama（eric.ma940124@gmail.com）</p>
+        
+          <h1 id="動態捕捉motion-capture">
+<a class="header-anchor" href="#%e5%8b%95%e6%85%8b%e6%8d%95%e6%8d%89motion-capture"></a>
+動態捕捉(Motion Capture)
+</h1><p><img src="https://d26oc3sg82pgk3.cloudfront.net/files/media/edit/image/29681/large_thumb%403x.jpg" alt="image"></p>
+<h2 id="介紹">
+<a class="header-anchor" href="#%e4%bb%8b%e7%b4%b9"></a>
+介紹
+</h2><p>動作捕捉(Motion Capture)，也稱作為動態捕捉或動捕(MoCap)</p>
+<ul>
+<li>將人體或物體的高解析度運動記錄到計算機系統內的的一項技術</li>
+<li>常用在&hellip;
+<ul>
+<li>軍事，娛樂，運動</li>
+<li>醫療應用</li>
+<li>計算機視覺及機器人的驗證</li>
+</ul>
+</li>
+</ul>
+<p>動捕是指紀錄演員的運動過程，並使用記錄到的資料套用到2D或3D的數位模型做動畫。如果它有包含到細緻的手部動作或面部表情，我們也稱它為<strong>表演捕捉</strong>(performence capture)。在一般領域中，動態捕捉通常是進行<strong>運動捕捉</strong>，但在電影或遊戲製作中，它比較傾向於<a href="https://hackmd.io/XMCBn3x3SU21dUc0IOHg6w?stext=5953%3A22%3A1%3A1747100118%3ADGPzS2&amp;both="><strong>匹配移動</strong></a>。</p>
+<p><strong>Note :</strong> 動態捕捉只紀錄<strong>演員的動作</strong>，而不是他們的<strong>視覺外觀</strong></p>
+<h2 id="歷史">
+<a class="header-anchor" href="#%e6%ad%b7%e5%8f%b2"></a>
+歷史
+</h2><p>最初的動畫是由畫家創作出一堆具有細微差異的圖像，再透過視覺暫留的方式來給我們一種圖片在動的錯覺。1914年，<a href="https://hackmd.io/XMCBn3x3SU21dUc0IOHg6w?both=&amp;stext=6245%3A21%3A1%3A1747101739%3AS4Z2Lo">動態摳像(Rotoscoping)</a>技術出現，動畫的流暢度以及細節得到了很大進步。但在此之後，動畫就很難再有什麼創新，直到電腦科技開始成熟普及之後，<a href="https://hackmd.io/XMCBn3x3SU21dUc0IOHg6w?both=&amp;stext=6775%3A79%3A1%3A1747103476%3AI-6afi">關鍵幀</a>的技術被發明出來，動畫家的工作量大幅度減少。然而，一些複雜的人體結構以及物理現象還是難以被創作出來。1983年，西門菲莎(Simon Fraser)大學在物理機械捕捉服上取的重大的突破，因此人們見識到了最早的機械式動態捕捉。在同一時期，麻省理工推出了一套基於LED燈的<a href="https://hackmd.io/XMCBn3x3SU21dUc0IOHg6w?both=&amp;stext=7141%3A32%3A1%3A1747103492%3AFDNe1q">圖像木偶化(graphical marionette)</a>系統，它就是早期光學式動態捕捉的雛形。</p>
+<h2 id="種類">
+<a class="header-anchor" href="#%e7%a8%ae%e9%a1%9e"></a>
+種類
+</h2><h3 id="marker-based-motion-capture">
+<a class="header-anchor" href="#marker-based-motion-capture"></a>
+Marker-based Motion Capture
+</h3><ul>
+<li>Acoustical Systems(30 - 60(Hz/fps))
+<ul>
+<li><strong>原理</strong> : 將一組聲波發射器貼在主要關節上，由三個接收器去收集發射器射出了聲波，用三角測量來去計算發射器的3D位置</li>
+<li><strong>缺點</strong> : 難以獲取某個瞬間的資料(你可能會動的比音速快でしょう)，所以無法應付高速或複雜的動作。對於環境的要求也是非常重要的(周圍物品對於雜訊的反射)。另外，過多得電纜也造成動作的自由度降低</li>
+<li>因此，聲學系統MoCap通常用於靜態(比較不流暢)捕捉，像是手部細節動作或小範圍的姿勢紀錄</li>
+</ul>
+</li>
+</ul>
+<p><strong>使用情境</strong> : 教學用、簡單動捕、低成本的研究</p>
+<ul>
+<li><a href="https://p3-sdbk2-media.byteimg.com/tos-cn-i-xv4ileqgde/d3e5c6eb832e43619197c6fe09d7711f~tplv-xv4ileqgde-resize-w:750.image">Mechanical Systems</a>(60 - 180(Hz/fps))
+<ul>
+<li><strong>原理</strong> : 將旋轉編碼器(Encoder)或電位器(Potentiometer)貼在關節處，並用一些桿桿連接，之後再以關節的運動角度及機械桿的長度去計算3D位置</li>
+<li><strong>優點</strong> : 相較於聲學式MoCap
+<ul>
+<li>不需要額外的電纜或接收器(自由度upup)</li>
+<li>動作精度大幅提升，動作實時更新(真的好快&hellip;)</li>
+<li>可以多人連動</li>
+</ul>
+</li>
+<li><strong>缺點</strong> :
+<ul>
+<li>穿戴物件笨重</li>
+<li>機械桿限制自然動作</li>
+<li>維護成本高</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>使用情境</strong> : 早期動畫製作、機械臂工程學模擬</p>
+<ul>
+<li>Magnetic Systems (60 - 240(Hz/fps))
+<ul>
+<li><strong>原理</strong> : 在關節放置接收器，測量與天線的距離跟方向</li>
+<li><strong>優點</strong> :
+<ul>
+<li>便宜(買到賺到)</li>
+<li>採樣率高(不是真的高)，適合簡單的動作捕捉，cp值突破天際</li>
+</ul>
+</li>
+<li><strong>缺點</strong> :
+<ul>
+<li>環境影響極大，任何東西都可能影響到磁力(超重的東西、磁鐵&hellip;)</li>
+<li>電纜影響自由度</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>使用情境</strong> : <a href="https://www.ndigital.com/electromagnetic-tracking-technology/aurora/">醫療手術研究</a>(微創手術&hellip;等)、VR研究室內追蹤</p>
+        
+        <hr><p>本文2026-05-15首發於<a href='https://Ama0124.github.io/'>My blog</a>，最後修改於2026-05-15</p>]]>
+      </description>
+      
+    </item>
+    
+  </channel>
+</rss>

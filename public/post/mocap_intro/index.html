@@ -1,0 +1,917 @@
+<!doctype html>
+<html
+  lang="zh-TW" 
+  data-theme-mode="auto"
+  >
+  <head><meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+/><title>
+  Motion capture introdution | Ama
+</title>
+<meta name="description" content="Motion Capture introdution"/><script>
+  window.siteConfig = JSON.parse("{\"anchor\":{\"auto\":{\"enable\":false,\"length\":60},\"explicit\":{\"enable\":false,\"marker\":\"{#anchor-\",\"prefix\":\"anchor-\"}},\"anchor_icon\":null,\"base\":\"https://Ama0124.github.io/\",\"clipboard\":{\"copyright\":{\"count\":50,\"enable\":false,\"license_type\":\"by-nc-sa\"},\"fail\":{\"en\":\"Copy failed (ﾟ⊿ﾟ)ﾂ\",\"ja\":\"コピー失敗 (ﾟ⊿ﾟ)ﾂ\",\"pt-br\":\"Falha ao copiar (ﾟ⊿ﾟ)ﾂ\",\"zh-cn\":\"复制失败 (ﾟ⊿ﾟ)ﾂ\",\"zh-tw\":\"複製失敗 (ﾟ⊿ﾟ)ﾂ\"},\"success\":{\"en\":\"Copy successfully (*^▽^*)\",\"ja\":\"コピー成功 (*^▽^*)\",\"pt-br\":\"Copiado com sucesso (*^▽^*)\",\"zh-cn\":\"复制成功 (*^▽^*)\",\"zh-tw\":\"複製成功 (*^▽^*)\"}},\"code_block\":{\"expand\":true},\"icon_font\":\"4552607_ex15nbittbh\",\"outdate\":{\"daysago\":180,\"enable\":false,\"message\":{\"en\":\"This article was last updated on {time}. Please note that the content may no longer be applicable.\",\"ja\":\"この記事は最終更新日：{time}。記載内容が現在有効でない可能性がありますのでご注意ください。\",\"pt-br\":\"Este artigo foi atualizado pela última vez em {time}. Observe que o conteúdo pode não ser mais aplicável.\",\"zh-cn\":\"本文最后更新于 {time}，请注意文中内容可能已不适用。\",\"zh-tw\":\"本文最後更新於 {time}，請注意文中內容可能已不適用。\"}}}");
+  
+</script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7cNoto%20Serif%20SC:400,400italic,700,700italic%7c&amp;display=swap"
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7cNoto%20Serif%20SC:400,400italic,700,700italic%7c&amp;display=swap"
+  media="print"
+  onload="this.media='all'"
+/>
+<link
+    rel="preload"
+    href="//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  /><link rel="stylesheet" href="/css/loader.min.ac746e154f756f8220326eeb52a719f142ab038be5a8ddf30ea5ef15ef2356ea.css" /><meta property="og:type" content="website" />
+  <meta property="og:title" content="Motion capture introdution | Ama" />
+  <meta
+    property="og:description"
+    content="Motion Capture introdution"
+  />
+  <meta property="og:url" content="https://Ama0124.github.io/post/mocap_intro/" />
+  <meta
+    property="og:site_name"
+    content="My blog"
+  />
+  <meta property="og:image" content="https://Ama0124.github.io/images/ui_bird.png" />
+  <meta property="article:author" content="Ama" />
+  <meta property="article:published_time" content="2026-05-15T05:16:15&#43;00:00" />
+  <meta property="article:modified_time" content="2026-05-15T05:16:15&#43;00:00" /><meta property="article:tag" content="MoCap" /><meta name="twitter:card" content="summary" /><meta name="twitter:image" content="https://Ama0124.github.io/images/ui_bird.png" />
+<link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/main.min.46db5ff579bb650cc792c721ecde4a3e036cd0d279d9669620322082e0991378.css" /><link
+    rel="preload"
+    as="style"
+    href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css"
+    integrity="sha384-IfxC36XL/toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei&#43;Zx/1oA/0l8ysE" crossorigin="anonymous"
+    onload="this.onload=null;this.rel='stylesheet'"
+  /><link
+    rel="preload"
+    as="style"
+    href="https://npm.webcache.cn/katex@0.16.24/dist/katex.min.css"
+    integrity="sha384-tTgKLjMYmJr94v8qu2PE5MUGSMbyN2xiH266JUB3gpm8vnnJywd1dWSOEfrFz&#43;YI" crossorigin="anonymous"
+    onload="this.onload=null;this.rel='stylesheet'"
+  /><script
+    src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js"
+    
+    
+    
+    
+    integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script><link
+    rel="stylesheet"
+    href="https://npm.webcache.cn/@reimujs/aos@0.1.2/dist/aos.css"
+    integrity="sha384-GMRP93c6Hkz9JVKGAuRR3nTS7M07RwPgTFenXiosjq2VbVgvdDNcz1g6Mkj8AONa" crossorigin="anonymous"/><link
+    rel="stylesheet"
+    href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css"
+    integrity="sha384-tLMkTWh2pfXNWGFlUS0w1TFtRG5xZ9lPWFOooj&#43;vDDLIL&#43;xBGQU/voDBY5XE2lVh" crossorigin="anonymous"/></head>
+  <body><div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi rotate"><img src="/images/monitarinngu.png" alt="loading" /></div><div class="loading-word">歡迎...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var loaderEl = document.getElementById('loader');
+    var startLoading = () => {
+      time = Date.now();
+      loaderEl.classList.remove("loading");
+    }
+    var hideLoader = () => {
+      document.body.style.overflow = 'auto';
+      loader.classList.add('loading');
+    };
+
+    var endLoading = () => {
+      if (!time) {
+        hideLoader();
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          hideLoader();
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    loaderEl.addEventListener('click', endLoading);
+  </script><div id="copy-tooltip"></div>
+<div id="lang-tooltip">
+本文章沒有找到對應的語言版本
+</div>
+<div id="heatmap-tooltip"></div><div id="container">
+      <div id="wrap"><div id="header-nav">
+  <nav id="main-nav" aria-label="Primary navigation"><a class="main-nav-link-wrap" href="/"><div class='main-nav-icon icon '>&#xe618;</div><span class="main-nav-link">首頁</span>
+      </a><a class="main-nav-link-wrap" href="/archives"><div class='main-nav-icon icon '>&#xe635;</div><span class="main-nav-link">歷程</span>
+      </a><a class="main-nav-link-wrap" href="/about"><div class='main-nav-icon icon '>&#xe635;</div><span class="main-nav-link">關於</span>
+      </a><a class="main-nav-link-wrap" href="/friend"><div class='main-nav-icon icon '>&#xe635;</div><span class="main-nav-link">朋友們</span>
+      </a><a class="main-nav-link-wrap" href="/oshi"><div class='main-nav-icon icon '>&#xe635;</div><span class="main-nav-link">推し</span>
+      </a><a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
+  </nav>
+  <nav id="sub-nav" aria-label="Secondary navigation"><a id="nav-search-btn" class="nav-icon popup-trigger" title="搜尋" aria-label="搜尋"></a></nav></div>
+<header id="header" aria-label="Site header"><picture></picture>
+    <img  fetchpriority="high" src="/images/ui_bird.png" alt="Motion capture introdution"><div id="header-outer">
+    <div id="header-title"><span id="logo">
+            <h1 data-aos="slide-up">Motion capture introdution</h1>
+          </span><h2 id="subtitle-wrap" data-aos="slide-down"></h2></div>
+  </div>
+</header><div id="content"
+          aria-label="Page content"
+          class="sidebar-left"
+            ><aside id="sidebar" aria-label="Sidebar"><div class="sidebar-wrapper-container sticky"><div class="sidebar-wrapper">
+    <div
+      class="sidebar-wrap"
+      data-aos="fade-up"
+    ><div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目錄</h3>
+<div class="sidebar-toc-wrapper toc-div-class">
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#介紹">介紹</a></li>
+    <li><a href="#歷史">歷史</a></li>
+    <li><a href="#種類">種類</a>
+      <ul>
+        <li><a href="#marker-based-motion-capture">Marker-based Motion Capture</a></li>
+        <li><a href="#markerless-motion-capture">Markerless Motion Capture</a></li>
+      </ul>
+    </li>
+    <li><a href="#acquired-data-process採集數據處理">Acquired Data Process(採集數據處理)</a>
+      <ul>
+        <li><a href="#direct-acquisition">Direct acquisition</a></li>
+        <li><a href="#indirect-acquisition">Indirect acquisition</a></li>
+      </ul>
+    </li>
+    <li><a href="#補充">補充</a></li>
+    <li><a href="#reference">Reference</a></li>
+    <li><a href="#實作">實作</a></li>
+    <li><a href="#名詞解釋">名詞解釋</a>
+      <ul>
+        <li><a href="#匹配移動match-moving">匹配移動(Match Moving)</a></li>
+        <li><a href="#動態摳像rotoscoping">動態摳像(Rotoscoping)</a></li>
+        <li><a href="#關鍵幀key-frame">關鍵幀(Key Frame)</a></li>
+        <li><a href="#圖像木偶化graphical-marionetter">圖像木偶化(Graphical Marionetter)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div></div>
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img
+    data-src="/avatar/avatar.JPG"
+    data-sizes="auto"
+    alt="Ama"
+    class="lazyload"
+  />
+  <div class="sidebar-author-name">Ama</div>
+  <div class="sidebar-description">ういういかわいい</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div><div class="sidebar-state-number">4</div>
+  </div>
+  <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
+    <div>分類</div>
+    <div class="sidebar-state-number">
+      0
+    </div>
+  </a>
+  <a class="sidebar-state-tag" href="/tags/" aria-label="sidebar-state-tag-link">
+    <div>標籤</div>
+    <div class="sidebar-state-number">4</div>
+  </a>
+</div>
+<div class="sidebar-social" ><div class="icon-discord sidebar-social-icon">
+        <a
+          href="https://discordapp.com/users/676404114439012372"
+          itemprop="url"
+          target="_blank"
+          aria-label="discord"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div><div class="icon-email sidebar-social-icon">
+        <a
+          href="eric.ma940124@gmail.com"
+          itemprop="url"
+          target="_blank"
+          aria-label="email"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div><div class="icon-github sidebar-social-icon">
+        <a
+          href="https://github.com/Ama0124"
+          itemprop="url"
+          target="_blank"
+          aria-label="github"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div><div class="icon-instagram sidebar-social-icon">
+        <a
+          href="https://www.instagram.com/5_187.delight"
+          itemprop="url"
+          target="_blank"
+          aria-label="instagram"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div></div><div class="sidebar-menu"><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/"
+        aria-label="首頁"
+      ></a><div class='sidebar-menu-icon icon '>&#xe618;</div><div class="sidebar-menu-link">首頁</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/archives"
+        aria-label="歷程"
+      ></a><div class='sidebar-menu-icon icon '>&#xe635;</div><div class="sidebar-menu-link">歷程</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/about"
+        aria-label="關於"
+      ></a><div class='sidebar-menu-icon icon '>&#xe635;</div><div class="sidebar-menu-link">關於</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/friend"
+        aria-label="朋友們"
+      ></a><div class='sidebar-menu-icon icon '>&#xe635;</div><div class="sidebar-menu-link">朋友們</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/oshi"
+        aria-label="推し"
+      ></a><div class='sidebar-menu-icon icon '>&#xe635;</div><div class="sidebar-menu-link">推し</div>
+    </div></div></div><div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div></div>
+  </div><div class="sidebar-widget"></div></div></aside>
+<section id="main" aria-label="Main content"><article
+  class="h-entry article"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <div
+    class="article-inner"
+    data-aos="fade-up"
+  >
+    <div class="article-meta"><div class="article-date">
+  <span
+    class="article-date-link icon-calendar"
+    data-aos="zoom-in"
+  >
+    <time datetime="2026-05-15 05:16:15 &#43;0000 UTC" itemprop="datePublished"
+      >2026-05-15</time
+    >
+    <time style="display: none;" id="post-update-time"
+      >2026-05-15</time
+    >
+  </span></div>
+</div><div class="hr-line"></div><div class="e-content article-entry" itemprop="articleBody"><h1 id="動態捕捉motion-capture">
+<a class="header-anchor" href="#%e5%8b%95%e6%85%8b%e6%8d%95%e6%8d%89motion-capture"></a>
+動態捕捉(Motion Capture)
+</h1><p><img src="https://d26oc3sg82pgk3.cloudfront.net/files/media/edit/image/29681/large_thumb%403x.jpg" alt="image"></p>
+<h2 id="介紹">
+<a class="header-anchor" href="#%e4%bb%8b%e7%b4%b9"></a>
+介紹
+</h2><p>動作捕捉(Motion Capture)，也稱作為動態捕捉或動捕(MoCap)</p>
+<ul>
+<li>將人體或物體的高解析度運動記錄到計算機系統內的的一項技術</li>
+<li>常用在&hellip;
+<ul>
+<li>軍事，娛樂，運動</li>
+<li>醫療應用</li>
+<li>計算機視覺及機器人的驗證</li>
+</ul>
+</li>
+</ul>
+<p>動捕是指紀錄演員的運動過程，並使用記錄到的資料套用到2D或3D的數位模型做動畫。如果它有包含到細緻的手部動作或面部表情，我們也稱它為<strong>表演捕捉</strong>(performence capture)。在一般領域中，動態捕捉通常是進行<strong>運動捕捉</strong>，但在電影或遊戲製作中，它比較傾向於<a href="https://hackmd.io/XMCBn3x3SU21dUc0IOHg6w?stext=5953%3A22%3A1%3A1747100118%3ADGPzS2&amp;both="><strong>匹配移動</strong></a>。</p>
+<p><strong>Note :</strong> 動態捕捉只紀錄<strong>演員的動作</strong>，而不是他們的<strong>視覺外觀</strong></p>
+<h2 id="歷史">
+<a class="header-anchor" href="#%e6%ad%b7%e5%8f%b2"></a>
+歷史
+</h2><p>最初的動畫是由畫家創作出一堆具有細微差異的圖像，再透過視覺暫留的方式來給我們一種圖片在動的錯覺。1914年，<a href="https://hackmd.io/XMCBn3x3SU21dUc0IOHg6w?both=&amp;stext=6245%3A21%3A1%3A1747101739%3AS4Z2Lo">動態摳像(Rotoscoping)</a>技術出現，動畫的流暢度以及細節得到了很大進步。但在此之後，動畫就很難再有什麼創新，直到電腦科技開始成熟普及之後，<a href="https://hackmd.io/XMCBn3x3SU21dUc0IOHg6w?both=&amp;stext=6775%3A79%3A1%3A1747103476%3AI-6afi">關鍵幀</a>的技術被發明出來，動畫家的工作量大幅度減少。然而，一些複雜的人體結構以及物理現象還是難以被創作出來。1983年，西門菲莎(Simon Fraser)大學在物理機械捕捉服上取的重大的突破，因此人們見識到了最早的機械式動態捕捉。在同一時期，麻省理工推出了一套基於LED燈的<a href="https://hackmd.io/XMCBn3x3SU21dUc0IOHg6w?both=&amp;stext=7141%3A32%3A1%3A1747103492%3AFDNe1q">圖像木偶化(graphical marionette)</a>系統，它就是早期光學式動態捕捉的雛形。</p>
+<h2 id="種類">
+<a class="header-anchor" href="#%e7%a8%ae%e9%a1%9e"></a>
+種類
+</h2><h3 id="marker-based-motion-capture">
+<a class="header-anchor" href="#marker-based-motion-capture"></a>
+Marker-based Motion Capture
+</h3><ul>
+<li>Acoustical Systems(30 - 60(Hz/fps))
+<ul>
+<li><strong>原理</strong> : 將一組聲波發射器貼在主要關節上，由三個接收器去收集發射器射出了聲波，用三角測量來去計算發射器的3D位置</li>
+<li><strong>缺點</strong> : 難以獲取某個瞬間的資料(你可能會動的比音速快でしょう)，所以無法應付高速或複雜的動作。對於環境的要求也是非常重要的(周圍物品對於雜訊的反射)。另外，過多得電纜也造成動作的自由度降低</li>
+<li>因此，聲學系統MoCap通常用於靜態(比較不流暢)捕捉，像是手部細節動作或小範圍的姿勢紀錄</li>
+</ul>
+</li>
+</ul>
+<p><strong>使用情境</strong> : 教學用、簡單動捕、低成本的研究</p>
+<ul>
+<li><a href="https://p3-sdbk2-media.byteimg.com/tos-cn-i-xv4ileqgde/d3e5c6eb832e43619197c6fe09d7711f~tplv-xv4ileqgde-resize-w:750.image">Mechanical Systems</a>(60 - 180(Hz/fps))
+<ul>
+<li><strong>原理</strong> : 將旋轉編碼器(Encoder)或電位器(Potentiometer)貼在關節處，並用一些桿桿連接，之後再以關節的運動角度及機械桿的長度去計算3D位置</li>
+<li><strong>優點</strong> : 相較於聲學式MoCap
+<ul>
+<li>不需要額外的電纜或接收器(自由度upup)</li>
+<li>動作精度大幅提升，動作實時更新(真的好快&hellip;)</li>
+<li>可以多人連動</li>
+</ul>
+</li>
+<li><strong>缺點</strong> :
+<ul>
+<li>穿戴物件笨重</li>
+<li>機械桿限制自然動作</li>
+<li>維護成本高</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>使用情境</strong> : 早期動畫製作、機械臂工程學模擬</p>
+<ul>
+<li>Magnetic Systems (60 - 240(Hz/fps))
+<ul>
+<li><strong>原理</strong> : 在關節放置接收器，測量與天線的距離跟方向</li>
+<li><strong>優點</strong> :
+<ul>
+<li>便宜(買到賺到)</li>
+<li>採樣率高(不是真的高)，適合簡單的動作捕捉，cp值突破天際</li>
+</ul>
+</li>
+<li><strong>缺點</strong> :
+<ul>
+<li>環境影響極大，任何東西都可能影響到磁力(超重的東西、磁鐵&hellip;)</li>
+<li>電纜影響自由度</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>使用情境</strong> : <a href="https://www.ndigital.com/electromagnetic-tracking-technology/aurora/">醫療手術研究</a>(微創手術&hellip;等)、VR研究室內追蹤</p>
+<ul>
+<li>Optical Systems
+<ul>
+<li><strong>原理</strong> : 在演員身上貼上反射器，然後用相機為每個反射器生成2D座標，然後用專有的軟體分析相機的數據生成3D座標。</li>
+<li><strong>優點</strong> :
+<ul>
+<li>超高採樣率(取決於相機的品質)，可以用來捕捉武術、體操等快速動作</li>
+<li>沒有電纜之類物件的影響(這就是自由阿)</li>
+<li>反射器在捕獲時幾乎沒有數量限制，理論上，光學式MoCap的動作細節是非常高的</li>
+</ul>
+</li>
+<li><strong>缺點</strong> :
+<ul>
+<li>超貴(超多高解析度攝影機，高技術性專用軟體)</li>
+<li>發射器之間的遮擋(牽手動作或緊密交戶的動作)。如果這些被遮擋的動作無法被修復 = 白拍(增加反射器來解決，CPU處理時間更長)</li>
+<li>及時交互性不足(收集到的數據往往需要進行過濾跟除噪)，時間成本非常的昂貴</li>
+</ul>
+</li>
+<li><strong>Note</strong>: 無止盡的增加反射器並不是一種好選擇，通常增加到一定數量就會出現「trackingconfusion」的問題。相機難以識別靠太近的反射器，所以需要解析度更高的攝影機($$)</li>
+<li><a href="https://www.researchgate.net/profile/Ronan-Boulic/publication/43651884/figure/fig3/AS:667677609693191@1536198155518/Setup-of-active-markers.jpg">Active Markers</a> (100 - 360(Hz/fps))
+<ul>
+<li>用LED燈或其他能發送光訊號發射器發射光線(通常是紅外線)，可以發射出不同的編碼光脈衝來區別不同角色身分。</li>
+<li>精度高，不需要後製來辨識每個點，不易混淆</li>
+<li>設備較重，穿戴成本高，需要電源或電池</li>
+<li><strong>使用情境</strong> : 實驗室高階人體運動分析、虛擬製作現場
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+          <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/vgwBfT_IFMw?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+        </div>
+</li>
+</ul>
+</li>
+<li><a href="https://p.turbosquid.com/ts-thumb/Am/l2eHJn/sj/screenshot006/png/1625335051/600x600/fit_q87/1de6c1c6074b0c91b5346ce7b31f55b2f5f6799d/screenshot006.jpg">Passive Markers</a> (120 - 500(Hz/fps))
+<ul>
+<li>用反射器(反光球)反射光源，利用軟體計算反射光源座標，整合成3D骨架</li>
+<li>設備輕巧，不需要電源，可以大量部屬(成本低)</li>
+<li>需要系統辨認(匹配)標記點，容易出錯，可能受阻擋</li>
+<li><strong>使用情境</strong> : 電影動畫、遊戲角色動作捕捉</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://www.youtube.com/watch?v=BlrRFiLCph4">曦曦鱼SAKANA</a></p>
+<ul>
+<li><a href="https://d10lvax23vl53t.cloudfront.net/images/Article_Images/ImageForArticle_43_15816813570943783.png">Inertial Systems</a>(60 - 240(Hz/fps))
+<ul>
+<li><strong>原理</strong> : 利用穿戴在身上的慣性測量單元(IMU, Inertial Measurement Unit)，測量各部位得加速度跟角動量，之後經由<a href="https://web.ntnu.edu.tw/~algo/Motion.html">運動學演算法</a>來推估出人體姿勢。
+<strong>補充</strong> : IMU裡通常包含 加速度計、陀螺儀、有些還有磁力計</li>
+<li><strong>優點</strong> :
+<ul>
+<li>不需要攝影機</li>
+<li>可以在戶外使用</li>
+<li>穿戴裝置輕便靈活</li>
+<li>成本比光學式低</li>
+</ul>
+</li>
+<li><strong>缺點</strong> :
+<ul>
+<li>會有累積誤差，用久了需要校正</li>
+<li>只會有人體姿態，空間位置無法準確取得</li>
+<li>如果有磁力計，磁力式有的問題它也會有</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>使用情境</strong> : VR遊戲或虛擬體驗、戶外運動分析、動作紀錄、工業工程學(分析勞工姿勢與安全)</p>
+<p><strong>介紹</strong> : <a href="https://electronics.sony.com/more/mocopi/all-mocopi/p/qmss1-uscx?srsltid=AfmBOoqvU7G9b9TteY-Dzengr-zu5_zgUBcbgIAYq7le1JQ_7w6RcD6U">Sony mcocpi 3D Motion Capture</a>(<a href="https://www.sony.com/electronics/support/other-products-motion-capture-systems/qm-ss1/specifications">規格</a>)</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/2eHjC7daOWs?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<h3 id="markerless-motion-capture">
+<a class="header-anchor" href="#markerless-motion-capture"></a>
+<a href="https://news.miami.edu/edu/_assets/images/images-stories/2020/09/kinatrax940x529.jpg">Markerless Motion Capture</a>
+</h3><p>在計算機視覺領域不斷的進步下，無標記光學式動態捕捉蓬勃發展，在這個系統下，複雜的特殊設備不再被需要。演員的動作被記錄在多個stream中，再用特殊的方法(CNN&hellip;之類的)分析這些stream來辨識人體型態，並且分解成各自獨立的部分以方便進行追蹤。
+所以，無標記式動態捕捉的所有過程都透過軟體進行，消除了物理限制，並提高了計算成本。在這個系統下最廣為人知的就是Microsoft的<a href="https://en.wikipedia.org/wiki/Kinect#">Kinect</a>(目前已停產)，它向大眾提供了低成本的動態捕捉方案。</p>
+<p><strong>Comparison :</strong> Comparison of $100 Markerless MoCap and $25k Optical Mocap{%youtube 3WZSCVeGblU %}</p>
+<h2 id="acquired-data-process採集數據處理">
+<a class="header-anchor" href="#acquired-data-process%e6%8e%a1%e9%9b%86%e6%95%b8%e6%93%9a%e8%99%95%e7%90%86"></a>
+Acquired Data Process(採集數據處理)
+</h2><h3 id="direct-acquisition">
+<a class="header-anchor" href="#direct-acquisition"></a>
+Direct acquisition
+</h3><p>在直接採集的系統下，數據不需要任何形式的後製(data processing cycle)，直接取得資料後就可以使用，例如 : 聲學式、磁力式、機械式&hellip;等，雖然這是直接採集系統的一個優點，但同時它也擁有硬體設備上的硬傷，採樣率也較低。
+雖說直接採集系統不需要進行任何後製，但因物理法則的影響，後製在某些情況下還是必須的。</p>
+<h3 id="indirect-acquisition">
+<a class="header-anchor" href="#indirect-acquisition"></a>
+Indirect acquisition
+</h3><p>間接採集系統，通常指光學式系統，提供了演員更多的自由度以及更高的採樣率。系統將採集到的數據送到數據集中進行分組，並透過專業軟體進行後驗處理(posteriori)產生最終數據集。因此，若在錄製流程中需要實時交互或立刻確認捕捉情形的話，建接採集系統就不是一個好選擇。它的天職就是精確且完美的捕捉複雜而快速的動作。</p>
+<h5 id="最後對數據進行清理過濾及映射到骨架上後就可以將標記綁定到骨架的關節上隨著動畫的每一幀進行移動了">
+<a class="header-anchor" href="#%e6%9c%80%e5%be%8c%e5%b0%8d%e6%95%b8%e6%93%9a%e9%80%b2%e8%a1%8c%e6%b8%85%e7%90%86%e9%81%8e%e6%bf%be%e5%8f%8a%e6%98%a0%e5%b0%84%e5%88%b0%e9%aa%a8%e6%9e%b6%e4%b8%8a%e5%be%8c%e5%b0%b1%e5%8f%af%e4%bb%a5%e5%b0%87%e6%a8%99%e8%a8%98%e7%b6%81%e5%ae%9a%e5%88%b0%e9%aa%a8%e6%9e%b6%e7%9a%84%e9%97%9c%e7%af%80%e4%b8%8a%e9%9a%a8%e8%91%97%e5%8b%95%e7%95%ab%e7%9a%84%e6%af%8f%e4%b8%80%e5%b9%80%e9%80%b2%e8%a1%8c%e7%a7%bb%e5%8b%95%e4%ba%86"></a>
+最後對數據進行清理過濾，及映射到骨架上後，就可以將標記綁定到骨架的關節上隨著動畫的每一幀進行移動了
+</h5><hr>
+<h2 id="補充">
+<a class="header-anchor" href="#%e8%a3%9c%e5%85%85"></a>
+補充
+</h2><p>如果你想知道更多動態捕捉底層的知識，請你參考(我都不會)</p>
+<p><strong>運動學演算法(Kinetics algorithm)</strong></p>
+<ul>
+<li><a href="https://www.diva-portal.org/smash/get/diva2:1127455/FULLTEXT02.pdf">Orientation estimation and movement recognition</a>(姿態估計)</li>
+<li><a href="https://en.wikipedia.org/wiki/Forward_kinematics">Forward kinetics</a>(正向運動學)</li>
+<li><a href="https://ocw.nthu.edu.tw/ocw/index.php?page=chapter&amp;cid=75&amp;chid=887">Rigid Body Kinematics</a>(剛體運動學)</li>
+</ul>
+<h2 id="reference">
+<a class="header-anchor" href="#reference"></a>
+Reference
+</h2><ul>
+<li><a href="https://en.wikipedia.org/wiki/Motion_capture">Motion Capture</a></li>
+<li><a href="https://paginas.fe.up.pt/~prodei/dsie12/papers/paper_7.pdf">Motion Capture Fundamental</a></li>
+<li><a href="https://d1wqtxts1xzle7.cloudfront.net/91480629/1547-libre.pdf?1664027373=&amp;response-content-disposition=inline%3B+filename%3DExploring_3D_Playblast_To_2D_Animation_R.pdf&amp;Expires=1747107593&amp;Signature=ZJWa3ldWc~RXWD6Xn-tgYNKl8J0jGU8zSt5xPFDEAH6-yAm8JEwZuTjPskeEm~uXvbkI6uIrmSLMPFg3wtJaEOgvM7acHch52-FGOjgCIm5hpjbRnpCiJ2I-rEuMNdPRSy7t~S8~lqY~NUE6mAFLiG6VbtvaYPGiJ1Y-G3aGxyKPTM~cBO3ED8CJzebVvkamLlc5~yxuXK-gT0nHrBJBOGR~2gx4MwQRe6ME4a10GRGH3NSsZLKjSeRYh~3Kd8iirspVSVPv5h-gPY6wWE8M2ZG0FWX4kSxKImbfKccf3bFoJQWN3ZwOdbR5YoRGLOD29G4nPVRNV9aJ3BlmxHlmyA__&amp;Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA">Rotoscoping</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Match_moving">Match Moving-Wekipedia</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E9%97%9C%E9%8D%B5%E6%A0%BC">Key Frame-Wekipedia</a></li>
+</ul>
+<h2 id="實作">
+<a class="header-anchor" href="#%e5%af%a6%e4%bd%9c"></a>
+實作
+</h2><div class="post-link-card-wrap">
+	<div class="post-link-card">
+		<a
+			href="/post/imu_ring/"
+			title="IMU_ring"></a><div class="post-link-card-cover-wrap">
+				<img
+					src="/images/ui_bird.png"
+					class="no-lightbox"
+					title="IMU_ring"
+					alt="IMU_ring"
+				/>
+			</div><div class="post-link-card-item-wrap">
+			<div class="post-link-card-title">IMU_ring</div>
+			<div class="post-link-card-excerpt">Motion Capture Implementation : IMU_ring
+</div>
+		</div>
+	</div>
+</div>
+
+<h2 id="名詞解釋">
+<a class="header-anchor" href="#%e5%90%8d%e8%a9%9e%e8%a7%a3%e9%87%8b"></a>
+名詞解釋
+</h2><h3 id="匹配移動match-moving">
+<a class="header-anchor" href="#%e5%8c%b9%e9%85%8d%e7%a7%bb%e5%8b%95match-moving"></a>
+匹配移動(Match Moving)
+</h3><p>匹配移動是一種基於軟體的技術，它允許一些2D元素、實況動作元素或CG插入到實景鏡頭內，並相對於鏡頭內物件正確的位置、方向以及比例進行移動。匹配移動跟動態摳像和攝影測量有關。同時他也常稱作動態追蹤(Motion Tracking)，與動態捕捉不同的地方是，動態捕捉是透過精密的攝影機及感測器等設備進行對人體運動資料的紀錄，匹配移動則不需要這樣的硬體設備來操作。</p>
+<h3 id="動態摳像rotoscoping">
+<a class="header-anchor" href="#%e5%8b%95%e6%85%8b%e6%91%b3%e5%83%8frotoscoping"></a>
+動態摳像(Rotoscoping)
+</h3><p>動態摳像是一種可以讓動畫師逐幀追蹤影片素材，以產生逼真動作的技術。最一開始的動態摳像是將影片圖像投影到玻璃面板上，並描在紙上，這個過程被稱作為轉描(由波蘭裔美國動畫師 Max Fleischer 開發)。雖然他已經被電腦取代，但這個過程依然叫做動態摳像，具體來說是怎麼操作呢? 製作人會主動對畫面上的物件進行遮罩(matte)，這樣就可以在畫面上提取物件並在不同畫面上使用，ex : 《星際大戰》中的光劍。而推動這個方法的著名工作室就是Ufotable。
+<strong>遮罩</strong>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Travelling_matte.svg/500px-Travelling_matte.svg.png" alt="image"></p>
+<h3 id="關鍵幀key-frame">
+<a class="header-anchor" href="#%e9%97%9c%e9%8d%b5%e5%b9%80key-frame"></a>
+<a href="https://zh.wikipedia.org/wiki/%E9%97%9C%E9%8D%B5%E6%A0%BC">關鍵幀(Key Frame)</a>
+</h3><p>平滑過渡的起點(幀)跟終點(幀)的繪畫或鏡頭。簡單來說就是作家想讓你在畫面上那些動作，而你在動畫中看到的東西通常都是關鍵幀。
+<img src="https://i0.wp.com/wherecreativityworks.com/wp-content/uploads/2023/01/walk-cycle-featured-image-1.jpg?fit=2830%2C1380&amp;ssl=1" alt="image"></p>
+<h3 id="圖像木偶化graphical-marionetter">
+<a class="header-anchor" href="#%e5%9c%96%e5%83%8f%e6%9c%a8%e5%81%b6%e5%8c%96graphical-marionetter"></a>
+圖像木偶化(Graphical Marionetter)
+</h3><p>就如同字面上意思所述，木偶圖像化就是將圖像轉變成像牽線木偶一樣，可以對它不同的部位進行移動或其他操作。動畫師可以透過GUI、滑鼠等工具來操作人物的骨架及關節。
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/77RvfjaWvRQ?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+</p>
+</div>
+    <footer class="article-footer"><ul class="article-category-list"></ul>
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in">
+      <a
+        class="article-tag-list-link"
+        href="/tags/mocap"
+        rel="tag"
+        >MoCap</a
+      >
+    </li></ul>
+</footer>
+  </div><nav
+    id="article-nav"
+    aria-label="Article navigation"
+    data-aos="fade-up"
+  ><div class="article-nav-link-wrap left"><img
+            data-src="/images/banner.png"
+            data-sizes="auto"
+            alt="Gallery"
+            class="lazyload"
+          /><a
+          href="/post/gallery/"
+          aria-label="前一篇:Gallery"
+          title="前一篇:Gallery"
+        ></a>
+        <div class="article-nav-caption">前一篇</div>
+        <h3 class="article-nav-title">Gallery</h3>
+      </div><div class="article-nav-link-wrap right"><img
+            data-src="/images/ui_bird.png"
+            data-sizes="auto"
+            alt="IMU_ring"
+            class="lazyload"
+          /><a
+          href="/post/imu_ring/"
+          aria-label="後一篇:IMU_ring"
+          title="後一篇:IMU_ring"
+        ></a>
+        <div class="article-nav-caption">後一篇</div>
+        <h3 class="article-nav-title">IMU_ring</h3>
+      </div></nav></article></section>
+        </div><footer id="footer" aria-label="Site footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info"><div>
+      <span class="icon-copyright"></span>2020-2026<span class="footer-info-sep rotate"></span>Ama
+    </div><div>
+        基於&nbsp;<a
+          href="https://gohugo.io/"
+          target="_blank"
+          rel="noopener nofollow noreferrer"
+          >Hugo</a
+        >&nbsp;Theme.<a
+          href="https://github.com/D-Sketon/hugo-theme-reimu"
+          target="_blank"
+          rel="noopener nofollow noreferrer"
+          >Reimu</a
+        >
+      </div><div>
+        <span class="icon-brush"
+          >&nbsp;489</span
+        >
+        &nbsp;|&nbsp;
+        <span class="icon-coffee">&nbsp;00:04</span>
+      </div><div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv"
+          >總訪問量&nbsp;<span
+            id="busuanzi_value_site_pv"
+          ></span
+        ></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv"
+          >總訪客量&nbsp;<span
+            id="busuanzi_value_site_uv"
+          ></span
+        ></span>
+      </div></div>
+</footer>
+<div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div><div id="mask" class="hide"></div>
+      </div><nav id="mobile-nav" aria-label="Mobile navigation">
+  <div class="sidebar-wrap"><div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目錄</h3>
+<div class="sidebar-toc-wrapper toc-div-class">
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#介紹">介紹</a></li>
+    <li><a href="#歷史">歷史</a></li>
+    <li><a href="#種類">種類</a>
+      <ul>
+        <li><a href="#marker-based-motion-capture">Marker-based Motion Capture</a></li>
+        <li><a href="#markerless-motion-capture">Markerless Motion Capture</a></li>
+      </ul>
+    </li>
+    <li><a href="#acquired-data-process採集數據處理">Acquired Data Process(採集數據處理)</a>
+      <ul>
+        <li><a href="#direct-acquisition">Direct acquisition</a></li>
+        <li><a href="#indirect-acquisition">Indirect acquisition</a></li>
+      </ul>
+    </li>
+    <li><a href="#補充">補充</a></li>
+    <li><a href="#reference">Reference</a></li>
+    <li><a href="#實作">實作</a></li>
+    <li><a href="#名詞解釋">名詞解釋</a>
+      <ul>
+        <li><a href="#匹配移動match-moving">匹配移動(Match Moving)</a></li>
+        <li><a href="#動態摳像rotoscoping">動態摳像(Rotoscoping)</a></li>
+        <li><a href="#關鍵幀key-frame">關鍵幀(Key Frame)</a></li>
+        <li><a href="#圖像木偶化graphical-marionetter">圖像木偶化(Graphical Marionetter)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div></div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img
+    data-src="/avatar/avatar.JPG"
+    data-sizes="auto"
+    alt="Ama"
+    class="lazyload"
+  />
+  <div class="sidebar-author-name">Ama</div>
+  <div class="sidebar-description">ういういかわいい</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div><div class="sidebar-state-number">4</div>
+  </div>
+  <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
+    <div>分類</div>
+    <div class="sidebar-state-number">
+      0
+    </div>
+  </a>
+  <a class="sidebar-state-tag" href="/tags/" aria-label="sidebar-state-tag-link">
+    <div>標籤</div>
+    <div class="sidebar-state-number">4</div>
+  </a>
+</div>
+<div class="sidebar-social" ><div class="icon-discord sidebar-social-icon">
+        <a
+          href="https://discordapp.com/users/676404114439012372"
+          itemprop="url"
+          target="_blank"
+          aria-label="discord"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div><div class="icon-email sidebar-social-icon">
+        <a
+          href="eric.ma940124@gmail.com"
+          itemprop="url"
+          target="_blank"
+          aria-label="email"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div><div class="icon-github sidebar-social-icon">
+        <a
+          href="https://github.com/Ama0124"
+          itemprop="url"
+          target="_blank"
+          aria-label="github"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div><div class="icon-instagram sidebar-social-icon">
+        <a
+          href="https://www.instagram.com/5_187.delight"
+          itemprop="url"
+          target="_blank"
+          aria-label="instagram"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div></div><div class="sidebar-menu"><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/"
+        aria-label="首頁"
+      ></a><div class='sidebar-menu-icon icon '>&#xe618;</div><div class="sidebar-menu-link">首頁</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/archives"
+        aria-label="歷程"
+      ></a><div class='sidebar-menu-icon icon '>&#xe635;</div><div class="sidebar-menu-link">歷程</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/about"
+        aria-label="關於"
+      ></a><div class='sidebar-menu-icon icon '>&#xe635;</div><div class="sidebar-menu-link">關於</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/friend"
+        aria-label="朋友們"
+      ></a><div class='sidebar-menu-icon icon '>&#xe635;</div><div class="sidebar-menu-link">朋友們</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/oshi"
+        aria-label="推し"
+      ></a><div class='sidebar-menu-icon icon '>&#xe635;</div><div class="sidebar-menu-link">推し</div>
+    </div></div></div></div><div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div></nav>
+</div><div class="site-search">
+        <div class="reimu-popup popup">
+          <div class="reimu-search">
+            <div class="reimu-search-input-icon"></div>
+            <div id="reimu-search-input"></div>
+            <div class="popup-btn-close"></div>
+          </div>
+          <div class="reimu-results">
+            <div id="reimu-stats"></div>
+            <div id="reimu-hits"></div>
+            <div id="reimu-pagination" class="reimu-pagination"></div>
+          </div>
+          <img class="reimu-bg" src="/images/reimu.png" />
+        </div>
+      </div><div id="aplayer" theme="var(--color-link)"></div><script
+    src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js"
+    
+    
+    
+    
+    integrity="sha384-3gT/vsepWkfz/ff7PpWNUeMzeWoH3cDhm/A8jM7ouoAK0/fP/9bcHHR5kHq2nf&#43;e" crossorigin="anonymous"></script><script
+    src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js"
+    
+    
+    
+    
+    integrity="sha384-J08i8An/QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script><script src="/js/main.js" integrity="" crossorigin="anonymous"  ></script><script src="/js/aos.js" integrity="" crossorigin="anonymous"  ></script><script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", aosInit);
+    } else {
+      aosInit();
+    }
+  </script><script src="/js/pjax_main.js" integrity="" crossorigin="anonymous" data-pjax ></script><script>
+    var ALGOLIA_CONFIG = {
+      logo: '\/images\/algolia_logo.svg',
+      algolia: {
+        applicationID: "UZB75IYILB",
+        apiKey: "148df3890cf79301c121adea6466ed32",
+        indexName: "AmaWeb",
+        hits: {
+          "per_page": parseInt("10")
+        },
+        labels: {
+          "input_placeholder": '搜尋.....',
+          "hits_empty": '未發現與 「${query}」相關內容',
+          "hits_stats": '找到${hits}條結果（用時 ${time} ms）'
+        }
+      }
+    };
+  </script><script
+    src="https://npm.webcache.cn/algoliasearch@4.17.1/dist/algoliasearch-lite.umd.js"
+    defer
+    
+    
+    
+    integrity="sha384-xvLS0jfKuoREs7pqkRI/OI8GcqohO5S&#43;jQz7ZBtQXnsXmD&#43;9jDOOY4cL6dCPzlrk" crossorigin="anonymous"></script><script
+    src="https://npm.webcache.cn/@reimujs/instantsearch.js@4.57.0-beta.1/dist/instantsearch.production.min.js"
+    defer
+    
+    
+    
+    integrity="sha384-aagKMe8nkqaP2DYQc8kkYOL5l&#43;M5Q2WH/Uhr4teOh0Ybp0RZj0kUSDm45qPikMjK" crossorigin="anonymous"></script><script src="/js/algolia_search.js" integrity="" crossorigin="anonymous"  ></script><script>
+  var setupFirework = () => {
+    if (! false  || !window.matchMedia('(max-width: 768px)').matches) {
+      if (window.firework) {
+        const options = JSON.parse("{\"excludeelements\":[\"a\",\"button\"],\"particles\":[{\"colors\":[\"var(--red-1)\",\"var(--red-2)\",\"var(--red-3)\",\"var(--red-4)\"],\"duration\":[1200,1800],\"easing\":\"easeOutExpo\",\"move\":[\"emit\"],\"number\":20,\"shape\":\"circle\",\"shapeOptions\":{\"alpha\":[0.3,0.5],\"radius\":[16,32]}},{\"colors\":[\"var(--red-0)\"],\"duration\":[1200,1800],\"easing\":\"easeOutExpo\",\"move\":[\"diffuse\"],\"number\":1,\"shape\":\"circle\",\"shapeOptions\":{\"alpha\":[0.2,0.5],\"lineWidth\":6,\"radius\":20}}]}");
+        options.excludeElements = options.excludeelements;
+        delete options.excludeelements;
+        window.firework(options);
+      }
+    }
+  }
+</script><script
+    src="https://npm.webcache.cn/mouse-firework@0.2.0/dist/index.umd.js"
+    defer
+    
+    
+    onload="setupFirework()"
+    integrity="sha384-qi9WggRt19tv8Vc7pCHW3ulMNLwrn515zaLEWZjl1px07vz8&#43;pUoWX8n1rgq282T" crossorigin="anonymous"></script><script
+    src="https://npm.webcache.cn/theme-shokax-pjax@0.0.3/dist/index.umd.js"
+    
+    
+    
+    
+    integrity="sha384-xneY1WY8hOfUzswrE4CrYq35N4BdVcxqxwHPr9zawE/jMSCxD&#43;jAPU55x/jj3wlf" crossorigin="anonymous"></script><script src="/js/pjax.js" integrity="" crossorigin="anonymous"  ></script>
+
+<div id="lazy-script">
+  <div><script data-pjax>
+        window.REIMU_POST = {
+          author: "Ama",
+          title: "Motion capture introdution",
+          url: "https:\/\/Ama0124.github.io\/post\/mocap_intro\/",
+          description: "Motion Capture introdution",
+          cover: "https:\/\/Ama0124.github.io\/images\/ui_bird.png",
+        };
+      </script><script src="/js/insert_highlight.js" integrity="" crossorigin="anonymous" data-pjax ></script><script src="/js/tabs.js" integrity="" crossorigin="anonymous" data-pjax defer></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;const initPswp = (gallery, children) => {
+          if (_$$(`${gallery} ${children}`).length > 0) {
+            new PhotoSwipeLightbox({
+              gallery,
+              children,pswpModule: () => safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8\u002boTJ7m3DfYEWX1fu1scuS4\u002bs")}).init();
+          }
+        }
+        const pswp = () => {
+          initPswp('.article-entry', 'a.article-gallery-item');
+          initPswp('.article-gallery', 'a.article-gallery-item');
+        }
+        pswp()
+      </script></div>
+</div><script
+    src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js"
+    
+    async
+    
+    
+    integrity="sha384-0M75wtSkhjIInv4coYlaJU83&#43;OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id&#43;S" crossorigin="anonymous"></script><script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+  </script><script>
+  const reimuCopyright = String.raw`
+   ______     ______     __     __    __     __  __    
+  /\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+  \ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+   \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+    \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                    
+  `;
+  console.log(String.raw`%c ${reimuCopyright}`, "color: #ff5252;");
+  console.log(
+    "%c Theme.Reimu" + " %c https://github.com/D-Sketon/hugo-theme-reimu ",
+    "color: white; background: #ff5252; padding:5px 0;",
+    "padding:4px;border:1px solid #ff5252;",
+  );
+</script><script>
+    var setupAPlayer = () => {
+      if (! false  || !window.matchMedia('(max-width: 768px)').matches) {
+        const isMobile = window.matchMedia('(max-width: 959px)').matches;
+        if (isMobile) {
+        const aplayer = _$('#aplayer');
+          if (aplayer) {
+            const aside = aplayer.parentNode?.parentNode;
+            if (aside?.tagName === 'ASIDE') {
+              aplayer.removeAttribute('data-aos');
+              aside.parentNode.removeChild(aplayer);
+              document.body.appendChild(aplayer);
+            }
+          }
+        }
+        new APlayer({
+            theme: "var(--color-link)",
+            container: document.getElementById('aplayer'),
+            audio: JSON.parse("[{\"artist\":\"柿崎ユウタ\",\"cover\":\"/images/music/tsuki.jpg\",\"name\":\"月が綺麗ねと言われたい！\",\"url\":\"/music/tsuki.mp3\"},{\"artist\":\"かぐや＆ヤチヨ\",\"cover\":\"/images/music/ray.jpg\",\"name\":\"ray (超かぐや姫 ver.)\",\"url\":\"/music/ray.mp3\"},{\"artist\":\"星野源\",\"cover\":\"/images/music/koi.png\",\"name\":\"恋\",\"url\":\"/music/Koi.mp3\"},{\"artist\":\"猫又おかゆ\",\"cover\":\"/images/music/kiss.jpg\",\"name\":\"キスだけでいいからね\",\"url\":\"/music/kiss.mp3\"},{\"artist\":\"猫又おかゆ\",\"cover\":\"/images/music/gazania.jpg\",\"name\":\"ガザニア\",\"url\":\"/music/gazania.mp3\"}]") || [],
+            fixed: isMobile ? true : ( true  || false),
+            autoplay:  false  || false,
+            loop: 'all' || 'all',
+            order: 'random' || 'list',
+            preload: 'auto' || 'auto',
+            volume:  0.3  || 0.7,
+            mutex:  null  || true,
+            listFolded:  null  || false,
+            lrcType:  null  || 0,
+        });
+      }
+    }
+    </script><script
+    src="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.js"
+    defer
+    
+    
+    onload="setupAPlayer()"
+    integrity="sha384-gdGYZwHnfJM54evoZhpO0s6ZF5BQiybkiyW7VXr&#43;h5UfruuRL/aORyw&#43;5&#43;HZoU6e" crossorigin="anonymous"></script></body>
+</html>

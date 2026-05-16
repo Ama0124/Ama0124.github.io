@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gallery on My blog</title>
+    <link>https://Ama0124.github.io/tags/gallery/</link>
+    <description>Recent content from My blog</description>
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    
+    <managingEditor>eric.ma940124@gmail.com (Ama)</managingEditor>
+    <webMaster>eric.ma940124@gmail.com (Ama)</webMaster>
+    
+    <copyright>本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！</copyright>
+    
+    <lastBuildDate>Thu, 14 May 2026 11:43:35 +0000</lastBuildDate>
+    
+    
+    <atom:link href="https://Ama0124.github.io/tags/gallery/index.xml" rel="self" type="application/rss&#43;xml" />
+    
+
+    
+    
+
+    <item>
+      <title>Gallery</title>
+      <link>https://Ama0124.github.io/post/gallery/</link>
+      <pubDate>Thu, 14 May 2026 11:43:35 &#43;0000</pubDate>
+      <author>eric.ma940124@gmail.com (Ama)</author>
+      <guid>https://Ama0124.github.io/post/gallery/</guid>
+      <description>
+        <![CDATA[<h1>Gallery</h1><p>作者：Ama（eric.ma940124@gmail.com）</p>
+        
+          <div class="gallery-wall" id="photoWall-bbd6d26d3"></div>
+<script>
+  (function() {
+    const imageUrls = JSON.parse("[\"/images/ui_bird.png\",\"/images/banner.png\"]");
+    let images = [];
+    const wallId = '#photoWall-bbd6d26d3';
+    let resizeTimer;
+    let lastWidth = 0;
+    
+    function init() {
+      createInitialDOM();
+      loadImages();
+      const wall = _$(wallId);
+      if (wall && window.ResizeObserver) {
+        const observer = new ResizeObserver((entries) => {
+          const newWidth = entries[0].contentRect.width;
+          if (Math.abs(newWidth - lastWidth) > 1) {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(renderPhotoWall, 250);
+          }
+        });
+        observer.observe(wall);
+      } else {
+        window.addEventListener('resize', handleResize);
+      }
+    }
+    
+    function createInitialDOM() {
+      const wall = _$(wallId);
+      if (!wall || !imageUrls.length) return;
+      
+      wall.style.opacity = '0';
+      wall.style.pointerEvents = 'none';
+      
+      imageUrls.forEach((url) => {
+        images.push({
+          width: 800,
+          height: 600,
+          aspectRatio: 4/3,
+          url: url,
+          loaded: false
+        });
+      });
+      
+      renderPhotoWall();
+    }
+    
+    function loadImages() {
+      const loadPromises = imageUrls.map((url, index) => {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.onload = () => {
+            if (images[index]) {
+              images[index].width = img.naturalWidth;
+              images[index].height = img.naturalHeight;
+              images[index].aspectRatio = img.naturalWidth / img.naturalHeight;
+              images[index].loaded = true;
+            }
+            resolve();
+          };
+          img.onerror = () => {
+            if (images[index]) {
+              images[index].loaded = true;
+            }
+            resolve();
+          };
+          img.src = url;
+        });
+      });
+      
+      Promise.all(loadPromises)
+        .then(() => {
+          const wall = _$(wallId);
+          if (wall) {
+            wall.style.opacity = '1';
+            wall.style.pointerEvents = 'auto';
+            wall.style.transition = 'opacity 0.3s ease';
+          }
+          renderPhotoWall();
+        })
+        .catch((error) => console.error("图片加载失败:", error));
+    }
+    
+    function renderPhotoWall() {
+      const wall = _$(wallId);
+      
+      if (!images.length || !wall) return;
+      
+      const screenWidth = wall.offsetWidth || window.innerWidth - 40;
+      lastWidth = screenWidth;
+      
+      wall.innerHTML = "";
+      const rowHeight = 200;
+      const gap = 10;
+      const maxPerRow = 4;
+      
+      let row = [];
+      let rowWidth = 0;
+      const rows = [];
+      
+      images.forEach((img) => {
+        const scaledWidth = rowHeight * img.aspectRatio;
+        
+        if (rowWidth + scaledWidth <= screenWidth && row.length < maxPerRow) {
+          row.push(img);
+          rowWidth += scaledWidth + gap;
+        } else {
+          if (row.length) rows.push(row);
+          row = [img];
+          rowWidth = scaledWidth + gap;
+        }
+      });
+      
+      if (row.length) rows.push(row);
+      
+      rows.forEach((row) => {
+        const rowDiv = document.createElement("div");
+        rowDiv.style.cssText = `display: flex; gap: ${gap}px; width: 100%`;
+        
+        row.forEach((img) => {
+          const item = document.createElement("div");
+          item.className = "photo-item";
+          const flex = row.length === 1 ? '1' : img.aspectRatio;
+          item.style.cssText = `flex: ${flex}; height: ${rowHeight}px`;
+          
+          const imgEl = document.createElement("img");
+          imgEl.alt = "Gallery Image";
+          imgEl.style.cssText = "width: 100%; height: 100%; object-fit: cover";
+          imgEl.className = "lazyload";
+          imgEl.dataset.src = img.url;
+          imgEl.dataset.sizes = "auto";
+
+          const link = document.createElement("a");
+          link.href = img.url;
+          link.dataset.pswpWidth = img.width;
+          link.dataset.pswpHeight = img.height;
+          link.target = "_blank";
+          link.className = "article-gallery-item";
+          link.style.cssText = "width: 100%; height: 100%";
+          link.appendChild(imgEl);
+          
+          item.appendChild(link);
+          rowDiv.appendChild(item);
+        });
+        
+        wall.appendChild(rowDiv);
+      });
+    }
+    
+    function handleResize() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(renderPhotoWall, 250);
+    }
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script><link rel="preload" as="style" href="/css/gallery.min.94cd3998ffbf0abe50a0f8a9251c39f9df60899a02db59add20026d894f2d44f.css" onload="this.onload=null;this.rel='stylesheet'" />
+        
+        <hr><p>本文2026-05-14首發於<a href='https://Ama0124.github.io/'>My blog</a>，最後修改於2026-05-14</p>]]>
+      </description>
+      
+    </item>
+    
+  </channel>
+</rss>
