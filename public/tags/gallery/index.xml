@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gallery on My blog</title>
-    <link>https://Ama0124.github.io/tags/gallery/</link>
+    <link>http://localhost:1313/tags/gallery/</link>
     <description>Recent content from My blog</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
@@ -15,7 +15,7 @@
     <lastBuildDate>Thu, 14 May 2026 11:43:35 +0000</lastBuildDate>
     
     
-    <atom:link href="https://Ama0124.github.io/tags/gallery/index.xml" rel="self" type="application/rss&#43;xml" />
+    <atom:link href="http://localhost:1313/tags/gallery/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
     
@@ -23,10 +23,10 @@
 
     <item>
       <title>Gallery</title>
-      <link>https://Ama0124.github.io/post/gallery/</link>
+      <link>http://localhost:1313/post/gallery/</link>
       <pubDate>Thu, 14 May 2026 11:43:35 &#43;0000</pubDate>
       <author>eric.ma940124@gmail.com (Ama)</author>
-      <guid>https://Ama0124.github.io/post/gallery/</guid>
+      <guid>http://localhost:1313/post/gallery/</guid>
       <description>
         <![CDATA[<h1>Gallery</h1><p>作者：Ama（eric.ma940124@gmail.com）</p>
         
@@ -190,9 +190,9 @@
       init();
     }
   })();
-</script><link rel="preload" as="style" href="/css/gallery.min.94cd3998ffbf0abe50a0f8a9251c39f9df60899a02db59add20026d894f2d44f.css" onload="this.onload=null;this.rel='stylesheet'" />
+</script><link rel="preload" as="style" href="/css/gallery.css" onload="this.onload=null;this.rel='stylesheet'" />
         
-        <hr><p>本文2026-05-14首發於<a href='https://Ama0124.github.io/'>My blog</a>，最後修改於2026-05-14</p>]]>
+        <hr><p>本文2026-05-14首發於<a href='http://localhost:1313/'>My blog</a>，最後修改於2026-05-14</p>]]>
       </description>
       
     </item>

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MoCap on My blog</title>
-    <link>https://Ama0124.github.io/tags/mocap/</link>
+    <link>http://localhost:1313/tags/mocap/</link>
     <description>Recent content from My blog</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
@@ -15,7 +15,7 @@
     <lastBuildDate>Fri, 15 May 2026 05:30:37 +0000</lastBuildDate>
     
     
-    <atom:link href="https://Ama0124.github.io/tags/mocap/index.xml" rel="self" type="application/rss&#43;xml" />
+    <atom:link href="http://localhost:1313/tags/mocap/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
     
@@ -23,10 +23,10 @@
 
     <item>
       <title>IMU_ring</title>
-      <link>https://Ama0124.github.io/post/imu_ring/</link>
+      <link>http://localhost:1313/post/imu_ring/</link>
       <pubDate>Fri, 15 May 2026 05:30:37 &#43;0000</pubDate>
       <author>eric.ma940124@gmail.com (Ama)</author>
-      <guid>https://Ama0124.github.io/post/imu_ring/</guid>
+      <guid>http://localhost:1313/post/imu_ring/</guid>
       <description>
         <![CDATA[<h1>IMU_ring</h1><p>作者：Ama（eric.ma940124@gmail.com）</p>
         
@@ -92,7 +92,7 @@ Prediction state
 </h3><p>在預測階段，我們要利用陀螺儀的角速度來進行姿態的更新，假設角速度為
 </p>
         
-        <hr><p>本文2026-05-15首發於<a href='https://Ama0124.github.io/'>My blog</a>，最後修改於2026-05-15</p>]]>
+        <hr><p>本文2026-05-15首發於<a href='http://localhost:1313/'>My blog</a>，最後修改於2026-05-15</p>]]>
       </description>
       
     </item>
@@ -101,10 +101,10 @@ Prediction state
 
     <item>
       <title>Motion capture introdution</title>
-      <link>https://Ama0124.github.io/post/mocap_intro/</link>
+      <link>http://localhost:1313/post/mocap_intro/</link>
       <pubDate>Fri, 15 May 2026 05:16:15 &#43;0000</pubDate>
       <author>eric.ma940124@gmail.com (Ama)</author>
-      <guid>https://Ama0124.github.io/post/mocap_intro/</guid>
+      <guid>http://localhost:1313/post/mocap_intro/</guid>
       <description>
         <![CDATA[<h1>Motion capture introdution</h1><p>作者：Ama（eric.ma940124@gmail.com）</p>
         
@@ -191,7 +191,7 @@ Marker-based Motion Capture
 </ul>
 <p><strong>使用情境</strong> : <a href="https://www.ndigital.com/electromagnetic-tracking-technology/aurora/">醫療手術研究</a>(微創手術&hellip;等)、VR研究室內追蹤</p>
         
-        <hr><p>本文2026-05-15首發於<a href='https://Ama0124.github.io/'>My blog</a>，最後修改於2026-05-15</p>]]>
+        <hr><p>本文2026-05-15首發於<a href='http://localhost:1313/'>My blog</a>，最後修改於2026-05-15</p>]]>
       </description>
       
     </item>
