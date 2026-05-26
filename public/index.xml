@@ -45,7 +45,7 @@ Gimbal lock
       <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/0VAc_G79POE?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
     </div>
 
-<a href="https://youtu.be/0VAc_G79POE?si=mo55KpuatTYBxRqp">Quaternion vs Ruler angle</a></p>
+<a href="https://youtu.be/z0EYqL3hyfw?si=QJyMPBr43zZtxTx6">四元數科普</a></p>
 <h2 id="quaternions">
 <a class="header-anchor" href="#quaternions"></a>
 Quaternions
@@ -64,6 +64,12 @@ Quaternions
 <li>MPU-9250 9-DOF IMU</li>
 </ul>
 <p>九軸IMU中包含</p>
+<ul>
+<li>陀螺儀</li>
+<li>加速度計</li>
+<li>磁力計</li>
+</ul>
+<p>這三個感測器可以提供姿態估計所需要的資訊</p>
         
         <hr><p>本文2026-05-15首發於<a href='http://localhost:1313/'>My blog</a>，最後修改於2026-05-15</p>]]>
       </description>

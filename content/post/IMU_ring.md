@@ -22,7 +22,7 @@ Gimbal lock(萬向鎖)就是陀螺儀在特定軸向時，會失去一個自由�
 
 在應用數學中，歐拉角(Euler angles)就會有gimbal lock的產生，因此我們會選擇四元數(Quaternions)來做運算。
 {{< youtube 0VAc_G79POE >}}
-[Quaternion vs Ruler angle](https://youtu.be/0VAc_G79POE?si=mo55KpuatTYBxRqp)
+[四元數科普](https://youtu.be/z0EYqL3hyfw?si=QJyMPBr43zZtxTx6)
 ## Quaternions
 通常複數是由實數加上虛數單位\\(i\\), 其中
 \\[i^{2} = -1\\]
@@ -61,12 +61,26 @@ Gimbal lock(萬向鎖)就是陀螺儀在特定軸向時，會失去一個自由�
 所以我們需要用sensor fusion來將多種感測器資料結合, 而 EKF(Extended Kalman Filter) 就是一種非常常見的非線性狀態估測方法。
 
 ### Prediction state
+
+\[\hat{x}_{k|k - 1} = f(\hat{x} _{k - 1|k - 1} , u _{k - 1}) \;\; --\text{狀態預測}\]
+\[P_{k|k - 1} = F_{k}P_{k|k - 1}F_{k}^T + Q_{k - 1} \;\; --\text{協方預測}\]
 在預測階段，我們要利用陀螺儀的角速度來進行姿態的更新，假設角速度為
 \[\omega = (\omega_{x}, \omega_{y}, \omega_{z})\]
 則四元數更新可以表示為
 \[\dot{q}(t) = \frac{1}{2}  \Omega(\omega) \cdot q(t)\] (解微分方程)
 我們可以得到
 \[\hat{x}_{k|k-1} = (I + \frac{1}{2}  \Omega(\omega_k)\Delta t)\hat{x}_{k-1|k-1}\]
+
+
+\[
+  \Omega(\omega) = \begin{bmatrix}
+        0 & \omega_z & -\omega_y & \omega_x \\
+        -\omega_z & 0 & \omega_x & \omega_y \\
+        \omega_y & -\omega_x & 0 & \omega_z \\
+        -\omega_x & -\omega_y & -\omega_z & 0
+    \end{bmatrix}
+\]
+這個矩陣是用來讓角速度可以作用在四元數上
 
 ### Update state
 在上一個階段我們依靠陀螺儀做預測，久了會有drift(飄移), 所以我們就要用
@@ -84,7 +98,7 @@ Gimbal lock(萬向鎖)就是陀螺儀在特定軸向時，會失去一個自由�
   - for Accelerator : \(v_{ref} = [0, 0, 1]^{T}\)
   - for Magnetometer :  : \(v_{ref} = [1, 0, 0]^{T}\)
 
-\[h(x) = R(q)^{T} \cdot v_{ref}\]
+\[H(x) = R(q)^{T} \cdot v_{ref}\]
    
 我們可以透過調整R去決定我們要多相信加速度計跟磁力計
 
@@ -96,8 +110,10 @@ Gimbal lock(萬向鎖)就是陀螺儀在特定軸向時，會失去一個自由�
 - Soft iron effect
     - 會造成磁場變形。
     - 理想情況下磁力計資料應該要為球形，但受到soft iron effect影響之後可能會變成橢球
-所以需要用calibration進行修正
-\textbf{Correction formula}
+所以需要進行calibration
+
+
+Correction formula
 \[Mag_{cal} = (Mag_{raw} - bias_{hard}) \times scale_{soft}\]
 
 ### 滑鼠控制邏輯

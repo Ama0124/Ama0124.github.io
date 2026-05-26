@@ -288,7 +288,7 @@ Gimbal lock
       <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/0VAc_G79POE?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
     </div>
 
-<a href="https://youtu.be/0VAc_G79POE?si=mo55KpuatTYBxRqp">Quaternion vs Ruler angle</a></p>
+<a href="https://youtu.be/z0EYqL3hyfw?si=QJyMPBr43zZtxTx6">四元數科普</a></p>
 <h2 id="quaternions">
 <a class="header-anchor" href="#quaternions"></a>
 Quaternions
@@ -337,7 +337,10 @@ Extended Kalman Filter
 <h3 id="prediction-state">
 <a class="header-anchor" href="#prediction-state"></a>
 Prediction state
-</h3><p>在預測階段，我們要利用陀螺儀的角速度來進行姿態的更新，假設角速度為
+</h3>\[\hat{x}_{k|k - 1} = f(\hat{x} _{k - 1|k - 1} , u _{k - 1}) \;\; --\text{狀態預測}\]<p>
+</p>
+\[P_{k|k - 1} = F_{k}P_{k|k - 1}F_{k}^T + Q_{k - 1} \;\; --\text{協方預測}\]<p>
+在預測階段，我們要利用陀螺儀的角速度來進行姿態的更新，假設角速度為
 </p>
 \[\omega = (\omega_{x}, \omega_{y}, \omega_{z})\]<p>
 則四元數更新可以表示為
@@ -345,7 +348,16 @@ Prediction state
 \[\dot{q}(t) = \frac{1}{2}  \Omega(\omega) \cdot q(t)\]<p> (解微分方程)
 我們可以得到
 </p>
-\[\hat{x}_{k|k-1} = (I + \frac{1}{2}  \Omega(\omega_k)\Delta t)\hat{x}_{k-1|k-1}\]<h3 id="update-state">
+\[\hat{x}_{k|k-1} = (I + \frac{1}{2}  \Omega(\omega_k)\Delta t)\hat{x}_{k-1|k-1}\]\[
+  \Omega(\omega) = \begin{bmatrix}
+        0 & \omega_z & -\omega_y & \omega_x \\
+        -\omega_z & 0 & \omega_x & \omega_y \\
+        \omega_y & -\omega_x & 0 & \omega_z \\
+        -\omega_x & -\omega_y & -\omega_z & 0
+    \end{bmatrix}
+\]<p>
+這個矩陣是用來讓角速度可以作用在四元數上</p>
+<h3 id="update-state">
 <a class="header-anchor" href="#update-state"></a>
 Update state
 </h3><p>在上一個階段我們依靠陀螺儀做預測，久了會有drift(飄移), 所以我們就要用</p>
@@ -369,7 +381,7 @@ Kalman gain
 </ul>
 </li>
 </ul>
-\[h(x) = R(q)^{T} \cdot v_{ref}\]<p>我們可以透過調整R去決定我們要多相信加速度計跟磁力計</p>
+\[H(x) = R(q)^{T} \cdot v_{ref}\]<p>我們可以透過調整R去決定我們要多相信加速度計跟磁力計</p>
 <h3 id="magnetometer-calibration">
 <a class="header-anchor" href="#magnetometer-calibration"></a>
 Magnetometer Calibration
@@ -384,14 +396,13 @@ Magnetometer Calibration
 <ul>
 <li>會造成磁場變形。</li>
 <li>理想情況下磁力計資料應該要為球形，但受到soft iron effect影響之後可能會變成橢球
-所以需要用calibration進行修正
-\textbf{Correction formula}
-
-\[Mag_{cal} = (Mag_{raw} - bias_{hard}) \times scale_{soft}\]</li>
+所以需要進行calibration</li>
 </ul>
 </li>
 </ul>
-<h3 id="滑鼠控制邏輯">
+<p>Correction formula
+</p>
+\[Mag_{cal} = (Mag_{raw} - bias_{hard}) \times scale_{soft}\]<h3 id="滑鼠控制邏輯">
 <a class="header-anchor" href="#%e6%bb%91%e9%bc%a0%e6%8e%a7%e5%88%b6%e9%82%8f%e8%bc%af"></a>
 滑鼠控制邏輯
 </h3><p>當 EKF 得到 quaternion 後，我們會將 quaternion 轉換成 Euler angles：
@@ -472,10 +483,10 @@ Deadzone
         >
       </div><div>
         <span class="icon-brush"
-          >&nbsp;566</span
+          >&nbsp;630</span
         >
         &nbsp;|&nbsp;
-        <span class="icon-coffee">&nbsp;00:04</span>
+        <span class="icon-coffee">&nbsp;00:05</span>
       </div><div>
         <span class="icon-eye"></span>
         <span id="busuanzi_container_site_pv"
