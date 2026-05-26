@@ -337,16 +337,29 @@ Extended Kalman Filter
 <h3 id="prediction-state">
 <a class="header-anchor" href="#prediction-state"></a>
 Prediction state
-</h3>\[\hat{x}_{k|k - 1} = f(\hat{x} _{k - 1|k - 1} , u _{k - 1}) \;\; --\text{狀態預測}\]<p>
+</h3><details class="details custom-block">
+  <summary>Prediction</summary>
+  <div class="details-content">\[\hat{x}_{k|k - 1} = f(\hat{x} _{k - 1|k - 1} , u _{k - 1}) \;\; --\text{狀態預測}\]<p>
 </p>
-\[P_{k|k - 1} = F_{k}P_{k|k - 1}F_{k}^T + Q_{k - 1} \;\; --\text{協方預測}\]<p>
-在預測階段，我們要利用陀螺儀的角速度來進行姿態的更新，假設角速度為
+\[P_{k|k - 1} = F_{k}P_{k|k - 1}F_{k}^T + Q_{k - 1} \;\; --\text{協方預測}\]</div>
+</details>
+<p>在預測階段，我們要利用陀螺儀的角速度來進行姿態的更新，假設角速度為
 </p>
 \[\omega = (\omega_{x}, \omega_{y}, \omega_{z})\]<p>
 則四元數更新可以表示為
 </p>
-\[\dot{q}(t) = \frac{1}{2}  \Omega(\omega) \cdot q(t)\]<p> (解微分方程)
-我們可以得到
+\[\dot{q}(t) = \frac{1}{2}  \Omega(\omega) \cdot q(t)\]<p>
+(解微分方程)我們可以得到
+<details class="details custom-block">
+  <summary>不專業細節</summary>
+  <div class="details-content">\[\frac{d}{dt}q = \frac{q_{k} - q_{k - 1}}{\Delta t} = \frac{1}{2}  \Omega(\omega) \cdot q_{k - 1}\]<p>
+</p>
+\[q_{k} - q_{k - 1} =  \frac{1}{2}  \Omega(\omega) \cdot q_{k - 1} \cdot \Delta t\]<p>
+</p>
+\[q_{k} = q_{k - 1} +  \frac{1}{2}  \Omega(\omega) \cdot q_{k - 1} \cdot \Delta t\]<p>
+</p>
+\[q_{k} = (I +  \frac{1}{2}  \Omega(\omega)  \cdot \Delta t) \cdot q_{k - 1}\]</div>
+</details>
 </p>
 \[\hat{x}_{k|k-1} = (I + \frac{1}{2}  \Omega(\omega_k)\Delta t)\hat{x}_{k-1|k-1}\]\[
   \Omega(\omega) = \begin{bmatrix}
@@ -483,7 +496,7 @@ Deadzone
         >
       </div><div>
         <span class="icon-brush"
-          >&nbsp;630</span
+          >&nbsp;689</span
         >
         &nbsp;|&nbsp;
         <span class="icon-coffee">&nbsp;00:05</span>

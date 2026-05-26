@@ -62,13 +62,26 @@ Gimbal lock(萬向鎖)就是陀螺儀在特定軸向時，會失去一個自由�
 
 ### Prediction state
 
+{{< details summary=Prediction >}}
+
 \[\hat{x}_{k|k - 1} = f(\hat{x} _{k - 1|k - 1} , u _{k - 1}) \;\; --\text{狀態預測}\]
 \[P_{k|k - 1} = F_{k}P_{k|k - 1}F_{k}^T + Q_{k - 1} \;\; --\text{協方預測}\]
+
+{{< /details >}}
+
 在預測階段，我們要利用陀螺儀的角速度來進行姿態的更新，假設角速度為
 \[\omega = (\omega_{x}, \omega_{y}, \omega_{z})\]
 則四元數更新可以表示為
-\[\dot{q}(t) = \frac{1}{2}  \Omega(\omega) \cdot q(t)\] (解微分方程)
-我們可以得到
+\[\dot{q}(t) = \frac{1}{2}  \Omega(\omega) \cdot q(t)\] 
+(解微分方程)我們可以得到
+{{< details summary=不專業細節 >}}
+
+\[\frac{d}{dt}q = \frac{q_{k} - q_{k - 1}}{\Delta t} = \frac{1}{2}  \Omega(\omega) \cdot q_{k - 1}\]
+\[q_{k} - q_{k - 1} =  \frac{1}{2}  \Omega(\omega) \cdot q_{k - 1} \cdot \Delta t\]
+\[q_{k} = q_{k - 1} +  \frac{1}{2}  \Omega(\omega) \cdot q_{k - 1} \cdot \Delta t\]
+\[q_{k} = (I +  \frac{1}{2}  \Omega(\omega)  \cdot \Delta t) \cdot q_{k - 1}\]
+
+{{< /details >}}
 \[\hat{x}_{k|k-1} = (I + \frac{1}{2}  \Omega(\omega_k)\Delta t)\hat{x}_{k-1|k-1}\]
 
 
