@@ -21,7 +21,8 @@ Gimbal lock(萬向鎖)就是陀螺儀在特定軸向時，會失去一個自由�
 
 
 在應用數學中，歐拉角(Euler angles)就會有gimbal lock的產生，因此我們會選擇四元數(Quaternions)來做運算。
-
+{{< youtube 0VAc_G79POE >}}
+[Quaternion vs Ruler angle](https://youtu.be/0VAc_G79POE?si=mo55KpuatTYBxRqp)
 ## Quaternions
 通常複數是由實數加上虛數單位\\(i\\), 其中
 \\[i^{2} = -1\\]
@@ -80,11 +81,11 @@ Gimbal lock(萬向鎖)就是陀螺儀在特定軸向時，會失去一個自由�
 - P : Covariance matrix
 - R : Measurement noice covariance
 - H : Jacobian matrix
-又
-\[h(x) = R(q)^{T} \cdot v_{ref}\]
-- for Accelerator : \(v_{ref} = [0, 0, 1]^{T}\)
-- for Magnetometer :  : \(v_{ref} = [1, 0, 0]^{T}\)
+  - for Accelerator : \(v_{ref} = [0, 0, 1]^{T}\)
+  - for Magnetometer :  : \(v_{ref} = [1, 0, 0]^{T}\)
 
+\[h(x) = R(q)^{T} \cdot v_{ref}\]
+   
 我們可以透過調整R去決定我們要多相信加速度計跟磁力計
 
 
