@@ -2,7 +2,7 @@
 title: "Real-time Mouse Cursor Control using Visual-Inertial Sensor Fusion and EKF"
 date: 2026-09-21
 draft: false
-tags: ["專題", "研究"]
+tags: ["專題"]
 categories: ["專題報告"]
 banner: "images/banner.png"
 cover: "images/banner.png"

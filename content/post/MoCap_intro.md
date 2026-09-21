@@ -4,6 +4,7 @@ date: 2026-05-15T05:16:15Z
 draft: false
 tags: 
     - MoCap
+categories: ["MoCap"]
 cover: "images/ui_bird.png"
 banner: "images/ui_bird.png"
 description: Motion Capture introdution
