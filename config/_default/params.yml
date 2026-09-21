@@ -179,7 +179,7 @@ summary:
 
 # RSS output
 rss:
-  limit: 10             # The number of recent articles to be output, write -1 to output all
+  limit: 3             # The number of recent articles to be output, write -1 to output all
   showFullContent: false # output full content or description
   showCopyright: false   # If true, add copyright to the end of article.
 

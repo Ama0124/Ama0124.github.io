@@ -130,6 +130,7 @@ description: Motion Capture introduction
 - [Forward kinetics](https://en.wikipedia.org/wiki/Forward_kinematics)(正向運動學)
 - [Rigid Body Kinematics](https://ocw.nthu.edu.tw/ocw/index.php?page=chapter&cid=75&chid=887)(剛體運動學)
 
+更 : 
 ## Reference
 
 - [Motion Capture](https://en.wikipedia.org/wiki/Motion_capture)
