@@ -132,18 +132,20 @@ Quaternions
         <hr><p>本文2026-05-15首發於<a href='http://localhost:1313/'>My blog</a>，最後修改於2026-05-15</p>]]>
       </description>
       
+        <category>MoCap</category>
+      
     </item>
     
     
 
     <item>
-      <title>Motion capture introdution</title>
+      <title>Motion capture introduction</title>
       <link>http://localhost:1313/post/mocap_intro/</link>
       <pubDate>Fri, 15 May 2026 05:16:15 &#43;0000</pubDate>
       <author>eric.ma940124@gmail.com (Ama)</author>
       <guid>http://localhost:1313/post/mocap_intro/</guid>
       <description>
-        <![CDATA[<h1>Motion capture introdution</h1><p>作者：Ama（eric.ma940124@gmail.com）</p>
+        <![CDATA[<h1>Motion capture introduction</h1><p>作者：Ama（eric.ma940124@gmail.com）</p>
         
           <h1 id="動態捕捉motion-capture">
 <a class="header-anchor" href="#%e5%8b%95%e6%85%8b%e6%8d%95%e6%8d%89motion-capture"></a>
@@ -230,6 +232,8 @@ Marker-based Motion Capture
         
         <hr><p>本文2026-05-15首發於<a href='http://localhost:1313/'>My blog</a>，最後修改於2026-05-15</p>]]>
       </description>
+      
+        <category>MoCap</category>
       
     </item>
     

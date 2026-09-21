@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MoCap on My blog</title>
-    <link>http://localhost:1313/tags/mocap/</link>
+    <link>http://localhost:1313/categories/mocap/</link>
     <description>Recent content from My blog</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
@@ -15,7 +15,7 @@
     <lastBuildDate>Fri, 15 May 2026 05:30:37 +0000</lastBuildDate>
     
     
-    <atom:link href="http://localhost:1313/tags/mocap/index.xml" rel="self" type="application/rss&#43;xml" />
+    <atom:link href="http://localhost:1313/categories/mocap/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
     

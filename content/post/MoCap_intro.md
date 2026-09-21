@@ -142,6 +142,9 @@ description: Motion Capture introduction
 ## 實作
 {{< link title="Imu ring" path="/post/IMU_ring.md" cover="/images/ui_bird.png" escape="true" >}}
 
+## 專題報告
+{{< link title="Real-time Ｍouse Cursor Control using Visual-Inertial Sensor Fusion and EKF" path="/post/ds_projectReport.md" cover="/images/ui_bird.png" escape="true" >}}
+
 ## 名詞解釋
 
 ### 匹配移動(Match Moving)
@@ -153,7 +156,7 @@ description: Motion Capture introduction
 ![image](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Travelling_matte.svg/500px-Travelling_matte.svg.png)
 
 ### [關鍵幀(Key Frame)](https://zh.wikipedia.org/wiki/%E9%97%9C%E9%8D%B5%E6%A0%BC)
-平滑過渡的起點(幀)跟終點(幀)的繪畫或鏡頭。簡單來說就是作家想讓你在畫面上那些動作，而你在動畫中看到的東西通常都是關鍵幀。
+平滑過渡的起點(幀)跟終點(幀)的繪畫或鏡頭。簡單來說就是作家想讓你在畫面上看到的那些動作，而你在動畫中看到的東西通常都是關鍵幀。
 ![image](https://i0.wp.com/wherecreativityworks.com/wp-content/uploads/2023/01/walk-cycle-featured-image-1.jpg?fit=2830%2C1380&ssl=1)
 
 ### 圖像木偶化(Graphical Marionetter)
