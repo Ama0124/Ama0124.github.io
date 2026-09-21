@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>專題報告 on My blog</title>
+    <link>http://localhost:1313/categories/%E5%B0%88%E9%A1%8C%E5%A0%B1%E5%91%8A/</link>
+    <description>Recent content from My blog</description>
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    
+    <managingEditor>eric.ma940124@gmail.com (Ama)</managingEditor>
+    <webMaster>eric.ma940124@gmail.com (Ama)</webMaster>
+    
+    <copyright>本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！</copyright>
+    
+    <lastBuildDate>Mon, 21 Sep 2026 00:00:00 +0000</lastBuildDate>
+    
+    
+    <atom:link href="http://localhost:1313/categories/%E5%B0%88%E9%A1%8C%E5%A0%B1%E5%91%8A/index.xml" rel="self" type="application/rss&#43;xml" />
+    
+
+    
+    
+
+    <item>
+      <title>Real-time Mouse Cursor Control using Visual-Inertial Sensor Fusion and EKF</title>
+      <link>http://localhost:1313/post/ds_projectreport/</link>
+      <pubDate>Mon, 21 Sep 2026 00:00:00 &#43;0000</pubDate>
+      <author>eric.ma940124@gmail.com (Ama)</author>
+      <guid>http://localhost:1313/post/ds_projectreport/</guid>
+      <description>
+        <![CDATA[<h1>Real-time Mouse Cursor Control using Visual-Inertial Sensor Fusion and EKF</h1><p>作者：Ama（eric.ma940124@gmail.com）</p>
+        
+          <blockquote>
+<p>💡 點此直接下載閱讀：<a href="/docs/dataScience.pdf">下載專題報告 PDF 完整版</a></p>
+</blockquote>
+<hr>
+<h3 id="報告預覽">
+<a class="header-anchor" href="#%e5%a0%b1%e5%91%8a%e9%a0%90%e8%a6%bd"></a>
+報告預覽
+</h3><iframe src="/docs/dataScience.pdf" width="100%" height="800px" style="border: none; border-radius: 8px;">
+    您的瀏覽器不支援直接預覽 PDF，請<a href="/docs/dataScience.pdf">點此下載</a>閱讀。
+</iframe>
+        
+        <hr><p>本文2026-09-21首發於<a href='http://localhost:1313/'>My blog</a>，最後修改於2026-09-21</p>]]>
+      </description>
+      
+        <category>專題報告</category>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>Pairs Trading Performance Under Reinforcement Learning</title>
+      <link>http://localhost:1313/post/finance_projectreport/</link>
+      <pubDate>Mon, 21 Sep 2026 00:00:00 &#43;0000</pubDate>
+      <author>eric.ma940124@gmail.com (Ama)</author>
+      <guid>http://localhost:1313/post/finance_projectreport/</guid>
+      <description>
+        <![CDATA[<h1>Pairs Trading Performance Under Reinforcement Learning</h1><p>作者：Ama（eric.ma940124@gmail.com）</p>
+        
+          <blockquote>
+<p>💡 點此直接下載閱讀：<a href="/docs/financial.pdf">下載專題報告 PDF 完整版</a></p>
+</blockquote>
+<hr>
+<h3 id="報告預覽">
+<a class="header-anchor" href="#%e5%a0%b1%e5%91%8a%e9%a0%90%e8%a6%bd"></a>
+報告預覽
+</h3><iframe src="/docs/financial.pdf" width="100%" height="800px" style="border: none; border-radius: 8px;">
+    您的瀏覽器不支援直接預覽 PDF，請<a href="/docs/financial.pdf">點此下載</a>閱讀。
+</iframe>
+        
+        <hr><p>本文2026-09-21首發於<a href='http://localhost:1313/'>My blog</a>，最後修改於2026-09-21</p>]]>
+      </description>
+      
+        <category>專題報告</category>
+      
+    </item>
+    
+  </channel>
+</rss>
