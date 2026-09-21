@@ -1,5 +1,5 @@
 ---
-title: "Motion capture introdution"
+title: "Motion capture introduction"
 date: 2026-05-15T05:16:15Z
 draft: false
 tags: 
