@@ -7,7 +7,7 @@ tags:
 categories: ["MoCap"]
 cover: "images/ui_bird.png"
 banner: "images/ui_bird.png"
-description: Motion Capture introdution
+description: Motion Capture introduction
 ---
 
 
