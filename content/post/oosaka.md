@@ -4,7 +4,7 @@ date: "2026-11-05T12:01:59+00:00"
 tags: ["大阪旅遊", "住宿指南"]
 cover: "images/ui_bird.png"
 banner: "images/ui_bird.png"
-
+description: Ooooooosaka
 draft: false
 ---
 
@@ -12,7 +12,6 @@ draft: false
 ---
 
 ### 剛看的房間
-
 
 - [$24,476 TWD ／4 晚, 原價：$28,832 TWD ](https://www.airbnb.com.tw/rooms/1729409085527236396?check_in=2027-01-19&check_out=2027-01-23&guests=7&adults=7&s=67&unique_share_id=2262b66b-0ddf-433d-a7ee-6f773b059a3f)
 
