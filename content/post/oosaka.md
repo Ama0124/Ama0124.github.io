@@ -13,23 +13,9 @@ draft: false
 
 ### 剛看的房間
 
-- [$24,476 TWD ／4 晚, 原價：$28,832 TWD ](https://www.airbnb.com.tw/rooms/1729409085527236396?check_in=2027-01-19&check_out=2027-01-23&guests=7&adults=7&s=67&unique_share_id=2262b66b-0ddf-433d-a7ee-6f773b059a3f)
+- [完全包場｜配備投影機｜適合家庭、團體入住](https://www.airbnb.com.tw/rooms/590294205496101017?check_in=2027-01-19&check_out=2027-01-23&guests=7&adults=7&s=67&unique_share_id=2a084b71-69e0-42dd-9b72-b5027ecfe1b2)
 
-
-- [$25,032 TWD ／4 晚, 原價：$28,441 TWD ](https://www.airbnb.com.tw/rooms/982389003764632989?check_in=2027-01-19&check_out=2027-01-23&guests=7&adults=7&s=67&unique_share_id=d2694c14-c76c-4b3e-b511-6c01e7043883)
-
-
-- [$22,933 TWD ／4 晚, 原價：$26,291 TWD ](https://www.airbnb.com.tw/rooms/1522853764404339217?check_in=2027-01-19&check_out=2027-01-23&guests=7&adults=7&s=67&unique_share_id=770b7e8a-fffd-41a3-8507-b9ff1c23f638)
-
-
-- [$23,891 TWD ／4 晚, 原價：$25,996 TWD](https://www.airbnb.com.tw/rooms/1541667904680111860?check_in=2027-01-19&check_out=2027-01-23&guests=7&adults=7&s=67&unique_share_id=7f926995-b4b2-4eee-aa1b-bb901bfc1c75)
-
-
-- [$28,014 TWD ／4 晚, 原價：$30,826 TWD ](https://www.airbnb.com.tw/rooms/1705596497247169055?check_in=2027-01-19&check_out=2027-01-23&guests=7&adults=7&s=67&unique_share_id=9c612c65-9329-4acf-a494-983cfd4dbab6)
-
-
-- [$24,875 TWD ／4 晚, 原價：$30,343 TWD ](https://www.airbnb.com.tw/rooms/1504101299768104513?check_in=2027-01-19&check_out=2027-01-23&guests=7&adults=7&s=67&unique_share_id=8f7d4089-b2c8-45f2-a3af-eb5c0bccdf93)
-
+- [住宿設有空調、設備齊全且附用餐區的廚房、平面電視以及附沖洗座、免費盥洗用品和吹風機的私人衛浴。住宿也提供冰箱、微波爐、爐子和電熱水壺。](https://www.booking.com/Share-AUTYHp)
 
 ---
 ### 入住篩選檢查表
