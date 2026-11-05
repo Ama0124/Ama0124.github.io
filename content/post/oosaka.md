@@ -80,3 +80,13 @@ draft: false
 - [ ] 總價是否已含清潔費、平台服務費及稅金。
 - [ ] 樓層是否有電梯（搬運大型行李重要考量）。
 - [ ] 是否提供自主入住（密碼鎖/鑰匙盒）與彈性行李寄存服務。
+
+
+---
+### 剛看的房間
+
+#### 西成區
+[$24,476 TWD ／4 晚, 原價：$28,832 TWD ](https://www.airbnb.com.tw/rooms/1729409085527236396?check_in=2027-01-19&check_out=2027-01-23&guests=7&adults=7&s=67&unique_share_id=2262b66b-0ddf-433d-a7ee-6f773b059a3f)
+
+#### 梅田
+[$25,032 TWD ／4 晚, 原價：$28,441 TWD ](https://www.airbnb.com.tw/rooms/982389003764632989?check_in=2027-01-19&check_out=2027-01-23&guests=7&adults=7&s=67&unique_share_id=d2694c14-c76c-4b3e-b511-6c01e7043883)
