@@ -15,7 +15,6 @@ draft: false
 
 - [完全包場｜配備投影機｜適合家庭、團體入住](https://www.airbnb.com.tw/rooms/590294205496101017?check_in=2027-01-19&check_out=2027-01-23&guests=7&adults=7&s=67&unique_share_id=2a084b71-69e0-42dd-9b72-b5027ecfe1b2)
 
-- [住宿設有空調、設備齊全且附用餐區的廚房、平面電視以及附沖洗座、免費盥洗用品和吹風機的私人衛浴。住宿也提供冰箱、微波爐、爐子和電熱水壺。](https://www.booking.com/Share-AUTYHp)
 
 ---
 ### 入住篩選檢查表
